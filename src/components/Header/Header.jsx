@@ -19,6 +19,9 @@ const Header = () => {
 				document
 					.querySelector(`.${styles["header__bottom"]}`)
 					.classList.add(`${styles["header__bottom--active"]}`);
+				document
+					.querySelector(`.${styles["header__top"]}`)
+					.classList.add(`${styles["header__top--hide"]}`);
 			} else {
 				document
 					.querySelector(`.${styles["header"]}`)
@@ -29,6 +32,9 @@ const Header = () => {
 				document
 					.querySelector(`.${styles["header__bottom"]}`)
 					.classList.remove(`${styles["header__bottom--active"]}`);
+				document
+					.querySelector(`.${styles["header__top"]}`)
+					.classList.remove(`${styles["header__top--hide"]}`);
 			}
 			prevScroll = currentScroll;
 		}

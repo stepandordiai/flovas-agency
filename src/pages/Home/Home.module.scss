@@ -37,6 +37,7 @@ input {
 	height: 60px;
 	border-radius: 30px;
 	margin-right: 15px;
+	width: 100%;
 }
 
 .title {
@@ -61,4 +62,11 @@ form {
 	height: 60px;
 	padding: 15px;
 	border-radius: 30px;
+}
+
+@media screen and (max-width: 600px) {
+	form {
+		display: flex;
+		flex-direction: column;
+	}
 }

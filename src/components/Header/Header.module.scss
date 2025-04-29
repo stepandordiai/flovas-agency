@@ -88,6 +88,15 @@
 		min-height: 50px;
 	}
 
+	.header__top {
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+		transition: box-shadow 0.3s;
+	}
+
+	.header__top--hide {
+		box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+	}
+
 	.header__bottom {
 		display: none;
 	}

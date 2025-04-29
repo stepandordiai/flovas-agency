@@ -1,9 +1,31 @@
 import styles from "./Home.module.scss";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import data from "./../../data/jobs.json";
+import { useState, useEffect } from "react";
+// import data from "./../../data/jobs.json";
+import axios from "axios";
 
 const Home = () => {
+	const [loading, setLoading] = useState(true);
+
+	const [data, setData] = useState([]);
+
+	const getJobs = async () => {
+		try {
+			const response = await axios(
+				"https://flovas-crud.onrender.com/api/products"
+			);
+			setData(response.data);
+			setLoading(false);
+		} catch (error) {
+			console.log(error);
+			setLoading(false);
+		}
+	};
+
+	useEffect(() => {
+		getJobs();
+	}, []);
+
 	const [what, setWhat] = useState("");
 	const [where, setWhere] = useState("");
 

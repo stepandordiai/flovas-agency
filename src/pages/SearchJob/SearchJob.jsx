@@ -28,8 +28,6 @@ const SearchJob = () => {
 		getJobs();
 	}, []);
 
-	console.log(data);
-
 	const { state } = useLocation();
 
 	const { what, where } = state;
@@ -42,7 +40,7 @@ const SearchJob = () => {
 	const [whereSearchJob, setWhereSearchJob] = useState(where);
 
 	return (
-		<>
+		<div className={styles["search-job"]}>
 			<form action="" className={styles["search-input-container"]}>
 				<div className={styles["input-container"]}>
 					<label htmlFor="what">Co</label>
@@ -64,13 +62,6 @@ const SearchJob = () => {
 						placeholder="Kolin"
 					/>
 				</div>
-				{/* <button
-					onClick={handleFormSubmit}
-					type="submit"
-					className={styles["search-btn"]}
-				>
-					Search
-				</button> */}
 			</form>
 			<div className={styles["jobs-container"]}>
 				{data
@@ -93,16 +84,18 @@ const SearchJob = () => {
 											<img width={20} src={pinIcon} alt="" />
 											{job.place}
 										</p>
-										<p className={styles["job-container__date"]}>{job.date}</p>
+										<p className={styles["job-container__date"]}>
+											Vloženo {job.createdAt.slice(0, 10)}
+										</p>
 									</div>
 									<p className={styles["job-container__title"]}>{job.title}</p>
-									<p>{job.details}</p>
+									<p>{job.info}</p>
 								</div>
 							</React.Fragment>
 						);
 					})}
 			</div>
-		</>
+		</div>
 	);
 };
 

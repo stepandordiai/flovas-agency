@@ -1,7 +1,11 @@
+.search-job {
+	padding: 120px 20px 20px;
+}
+
 .search-input-container {
-	margin-top: 100px;
 	background: #ffa500;
 	display: flex;
+	margin-bottom: 20px;
 }
 
 .input-container {
@@ -13,12 +17,12 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 20px;
-	padding: 20px;
 }
 
 .job-container {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	padding: 10px;
+	border-radius: 25px;
 }
 
 .job-container__header {
@@ -35,6 +39,12 @@
 	font-size: 1.5rem;
 	font-weight: 600;
 	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+	.search-job {
+		padding: 70px 20px 20px;
+	}
 }
 
 @media screen and (max-width: 750px) {
