@@ -1,11 +1,35 @@
 import styles from "./SearchJob.module.scss";
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
-import data from "./../../data/jobs.json";
+import { useEffect, useState } from "react";
+// import data from "./../../data/jobs.json";
+import axios from "axios";
 import React from "react";
 import pinIcon from "/icons/pin.png";
 
 const SearchJob = () => {
+	const [loading, setLoading] = useState(true);
+
+	const [data, setData] = useState([]);
+
+	const getJobs = async () => {
+		try {
+			const response = await axios(
+				"https://flovas-crud.onrender.com/api/products"
+			);
+			setData(response.data);
+			setLoading(false);
+		} catch (error) {
+			console.log(error);
+			setLoading(false);
+		}
+	};
+
+	useEffect(() => {
+		getJobs();
+	}, []);
+
+	console.log(data);
+
 	const { state } = useLocation();
 
 	const { what, where } = state;
