@@ -28,7 +28,7 @@ const Home = () => {
 								onChange={(e) => setWhat(e.target.value)}
 								id="what"
 								type="text"
-								// placeholder="Elektrik"
+								placeholder={`Například \"elektrikář\"`}
 							/>
 						</div>
 						<div className={styles["input-container"]}>
@@ -37,7 +37,7 @@ const Home = () => {
 								onChange={(e) => setWhere(e.target.value)}
 								id="where"
 								type="text"
-								// placeholder="Kolin"
+								placeholder={`Například \"Kolín\"`}
 							/>
 						</div>
 						<button

@@ -1,0 +1,81 @@
+@use "./../../mixins" as *;
+
+.header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	min-height: 50px;
+	background: #fff;
+	@include flex-center;
+	flex-direction: column;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s;
+}
+
+.header--hide {
+	transform: translateY(-50%);
+}
+
+.header__top {
+	width: 100%;
+	padding: 0 20px;
+	height: 50px;
+	@include flex-between-center;
+}
+
+.header__bottom {
+	position: relative;
+	width: 100%;
+	padding: 0 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header__bottom-logo {
+	position: absolute;
+	left: 20px;
+	font-size: 1.5rem;
+	font-weight: 600;
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+.header__bottom-logo--active {
+	opacity: 1;
+}
+
+.header__nav {
+	height: 50px;
+	@include flex-center;
+}
+
+.header__logo {
+	color: #000;
+	font-size: 1.5rem;
+	font-weight: 600;
+
+	span {
+		font-weight: 200;
+	}
+}
+
+.header__nav-link {
+	height: 40px;
+	color: #000;
+	display: grid;
+	place-content: center;
+	padding: 10px;
+	border-radius: 20px;
+
+	&:nth-of-type(1) {
+		background: rgba(255, 166, 0, 0.25);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.header__bottom {
+		display: none;
+	}
+}
