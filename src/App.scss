@@ -2,3 +2,8 @@
 @use "mixins";
 @use "variables";
 @use "fonts";
+
+#root,
+body {
+	height: 2000px;
+}

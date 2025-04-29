@@ -1,0 +1,49 @@
+@use "./../../mixins" as *;
+
+.home {
+	@include flex-center;
+	height: 100dvh;
+	background-image: url(/img/14.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.search-input-container {
+	display: flex;
+	align-items: flex-end;
+}
+
+.input-container {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	color: #fff;
+}
+
+input {
+	border: 1px solid black;
+	background: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	margin-right: 20px;
+}
+
+.title {
+	color: #fff;
+	font-size: 3rem;
+	margin-bottom: 50px;
+}
+
+.search-container {
+	background: rgba(0, 0, 0, 0.5);
+	padding: 50px;
+}
+
+.search-btn {
+	background: orange;
+	padding: 20px;
+	border-radius: 10px;
+}
