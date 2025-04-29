@@ -5,32 +5,41 @@
 	top: 0;
 	right: 0;
 	left: 0;
-	min-height: 50px;
-	background: #fff;
+	min-height: 100px;
 	@include flex-center;
 	flex-direction: column;
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s;
 }
 
 .header--hide {
-	transform: translateY(-50%);
+	transform: translateY(-50px);
+	border-radius: 0 0;
 }
 
 .header__top {
 	width: 100%;
 	padding: 0 20px;
 	height: 50px;
+	background: #fff;
+
 	@include flex-between-center;
 }
 
 .header__bottom {
+	height: 50px;
 	position: relative;
 	width: 100%;
 	padding: 0 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: #fff;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s;
+}
+
+.header__bottom--active {
+	border-radius: 0 0 25px 25px;
 }
 
 .header__bottom-logo {
@@ -75,6 +84,10 @@
 }
 
 @media screen and (max-width: 600px) {
+	.header {
+		min-height: 50px;
+	}
+
 	.header__bottom {
 		display: none;
 	}
