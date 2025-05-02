@@ -5,9 +5,39 @@
 	top: 0;
 	right: 0;
 	left: 0;
+	z-index: 1;
 	min-height: 75px;
 	@include flex-between-center;
 	padding: 0 25px;
+	background: #e0dddd;
+}
+
+.header::before {
+	content: "";
+	position: absolute;
+	top: 75px;
+	left: 25px;
+	width: 50px;
+	z-index: -1;
+	aspect-ratio: 1/1;
+	border-radius: 25px;
+	background: transparent;
+	box-shadow: -25px -25px #e0dddd;
+	pointer-events: none;
+}
+
+.header::after {
+	content: "";
+	position: absolute;
+	top: 75px;
+	right: 25px;
+	width: 50px;
+	z-index: -1;
+	aspect-ratio: 1/1;
+	border-radius: 25px;
+	background: transparent;
+	box-shadow: 25px -25px #e0dddd;
+	pointer-events: none;
 }
 
 .header__logo {
@@ -21,7 +51,10 @@
 }
 
 .header__nav {
-	position: relative;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	z-index: 0;
 	height: 50px;
 	border-radius: 25px;
@@ -51,6 +84,32 @@
 	.header {
 		min-height: 50px;
 		padding: 0 10px;
+	}
+
+	.header::before {
+		content: "";
+		position: absolute;
+		top: 50px;
+		left: 10px;
+		width: 50px;
+		aspect-ratio: 1/1;
+		border-radius: 25px;
+		background: transparent;
+		box-shadow: -25px -25px #e0dddd;
+		pointer-events: none;
+	}
+
+	.header::after {
+		content: "";
+		position: absolute;
+		top: 50px;
+		right: 10px;
+		width: 50px;
+		aspect-ratio: 1/1;
+		border-radius: 25px;
+		background: transparent;
+		box-shadow: 25px -25px #e0dddd;
+		pointer-events: none;
 	}
 
 	.header__nav {

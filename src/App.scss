@@ -3,17 +3,12 @@
 @use "variables";
 @use "fonts";
 
-body {
-	// height: 2000px;
-	position: relative;
-	height: 100dvh;
-	font-family: "Urbanist", sans-serif;
-	background: #f1eded;
-	// padding: 75px 25px 25px;
+::-webkit-scrollbar {
+	display: none;
 }
 
-// @media screen and (width <= 896px) {
-// 	body {
-// 		padding: 50px 10px 10px;
-// 	}
-// }
+body {
+	position: relative;
+	font-family: "Urbanist", sans-serif;
+	background: #e0dddd;
+}

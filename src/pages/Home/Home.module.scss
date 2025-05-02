@@ -1,15 +1,43 @@
 @use "./../../mixins" as *;
 
 .home {
-	@include flex-center;
+	scrollbar-width: none;
 	position: absolute;
 	top: 75px;
 	right: 25px;
-	bottom: 25px;
+	bottom: 0;
+	height: 10000px;
 	left: 25px;
 	border-radius: 25px;
-	// background: linear-gradient(-90deg, rgb(255, 216, 143), rgb(255, 151, 82));
+}
+
+.home-inner {
+	padding-top: 300px;
 	background: #fff;
+	border-radius: 25px;
+	padding: 100px 12.5px 12.5px;
+}
+
+.title-container {
+	margin-bottom: 200px;
+}
+
+.home-title {
+	text-align: center;
+	font-size: 3rem;
+}
+
+.home-sec-title {
+	text-align: center;
+	font-size: 2rem;
+
+	span:nth-of-type(1) {
+		font-weight: 600;
+	}
+
+	span:nth-of-type(2) {
+		font-weight: 200;
+	}
 }
 
 .search-input-container {
@@ -81,3 +109,85 @@ form {
 		flex-direction: column;
 	}
 }
+
+.search-job {
+	padding: 120px 20px 20px;
+}
+
+.search-input-container {
+	background: #ffa500;
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.input-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.jobs-container {
+	// position: sticky;
+	// top: 75px;
+	// border-radius: 25px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	// background: #fff;
+	// padding: 12.5px;
+}
+
+.job-container {
+	background: #eeeeee;
+	padding: 10px;
+	border-radius: 25px;
+	cursor: pointer;
+
+	&:hover {
+		background: var(--accent-clr);
+	}
+}
+
+.job-container__img {
+	border-radius: 25px;
+	margin-bottom: 10px;
+}
+
+.job-container__header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.job-container__date {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.job-container__title {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+@media screen and (width <= 1400px) {
+	.jobs-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media screen and (width <= 1100px) {
+	.jobs-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (width <= 750px) {
+	.jobs-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+// @media screen and (max-width: 600px) {
+// 	.search-job {
+// 		padding: 70px 20px 20px;
+// 	}
+// }

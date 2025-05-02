@@ -14,11 +14,14 @@ const LanguageSelect = () => {
 		};
 
 		const selectBtn = document.querySelector(".lng-select__btn");
-		const selectList = document.querySelector(".lng-select__list");
+		const selectList = document.querySelector(".lng-select-banner");
 		const selectOptions = selectList.querySelectorAll(".lng-select__option");
 
 		selectBtn.addEventListener("click", () => {
 			selectList.classList.toggle("lng-select__list--visible");
+			document
+				.querySelector(".lng-select-curtain")
+				.classList.toggle("lng-select-curtain--active");
 		});
 
 		selectOptions.forEach((option) => {
@@ -37,6 +40,9 @@ const LanguageSelect = () => {
 					option.querySelector("span").innerHTML;
 				selectBtn.querySelector("img").src = option.querySelector("img").src;
 				selectList.classList.remove("lng-select__list--visible");
+				document
+					.querySelector(".lng-select-curtain")
+					.classList.remove("lng-select-curtain--active");
 			});
 		});
 
@@ -44,9 +50,9 @@ const LanguageSelect = () => {
 			if (e.target !== selectBtn) {
 				// selectBtn.classList.remove("lng-select__btn--active");
 				selectList.classList.remove("lng-select__list--visible");
-				// document
-				// 	.querySelector(".lng-select__btn-icon")
-				// 	.classList.remove("lng-select__btn-icon--active");
+				document
+					.querySelector(".lng-select-curtain")
+					.classList.remove("lng-select-curtain--active");
 			}
 		});
 	}, []);
@@ -75,41 +81,49 @@ const LanguageSelect = () => {
 	const activeLngOption = "lng-select__option lng-select__option--active";
 
 	return (
-		<div className="lng-select">
-			<button className="lng-select__btn">
-				<span className="lng-select__btn-value">{lngSelectBtnTxt}</span>
-				<img width={20} src={lngSelectBtnIcon} alt="" />
-			</button>
-			<ul className="lng-select__list">
-				<li
-					className={
-						getLngStorage() === "cs" ? activeLngOption : inactiveLngOption
-					}
-					data-value="cs"
-				>
-					<span>Čeština</span>
-					<img width={20} src={csIcon} alt="" />
-				</li>
-				<li
-					className={
-						getLngStorage() === "uk" ? activeLngOption : inactiveLngOption
-					}
-					data-value="uk"
-				>
-					<span>Українська</span>
-					<img width={20} src={ukIcon} alt="" />
-				</li>
-				<li
-					className={
-						getLngStorage() === "en" ? activeLngOption : inactiveLngOption
-					}
-					data-value="en"
-				>
-					<span>English</span>
-					<img width={20} src={enIcon} alt="" />
-				</li>
-			</ul>
-		</div>
+		<>
+			<div className="lng-select">
+				<button className="lng-select__btn">
+					<span className="lng-select__btn-value">{lngSelectBtnTxt}</span>
+					<img width={20} src={lngSelectBtnIcon} alt="" />
+				</button>
+			</div>
+			<div className="lng-select-banner">
+				<div className="lng-select-list-container">
+					<p>Vyberte si jazyk, který preferujete</p>
+					<ul className="lng-select__list">
+						<li
+							className={
+								getLngStorage() === "cs" ? activeLngOption : inactiveLngOption
+							}
+							data-value="cs"
+						>
+							<span>Čeština</span>
+							<img width={20} src={csIcon} alt="" />
+						</li>
+						<li
+							className={
+								getLngStorage() === "uk" ? activeLngOption : inactiveLngOption
+							}
+							data-value="uk"
+						>
+							<span>Українська</span>
+							<img width={20} src={ukIcon} alt="" />
+						</li>
+						<li
+							className={
+								getLngStorage() === "en" ? activeLngOption : inactiveLngOption
+							}
+							data-value="en"
+						>
+							<span>English</span>
+							<img width={20} src={enIcon} alt="" />
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div className="lng-select-curtain"></div>
+		</>
 	);
 };
 
