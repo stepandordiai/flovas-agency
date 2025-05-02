@@ -49,9 +49,9 @@ const Home = () => {
 					<p className={styles["title"]}>
 						Najít si lepší práci a pracovní prostor
 					</p>
-					<p
-						className={styles["sec-title"]}
-					>{`Founded jobd: ${matchingJobs.length}`}</p>
+					<p className={styles["sec-title"]}>{`Founded jobd: ${
+						loading ? "Loading..." : matchingJobs.length
+					}`}</p>
 					<form action="" className={styles["search-input-container"]}>
 						<div className={styles["input-container"]}>
 							<label htmlFor="what">Co</label>

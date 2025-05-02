@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import styles from "./Header.module.scss";
 import { NavLink } from "react-router-dom";
+import LngSelect from "../LngSelect/LngSelect";
 
 const Header = () => {
 	useEffect(() => {
@@ -47,11 +48,10 @@ const Header = () => {
 		<>
 			<header className={styles["header"]}>
 				<div className={styles["header__top"]}>
-					<div>Search</div>
 					<NavLink to={"/"} className={styles["header__logo"]}>
 						Flovas <span>agentura</span>
 					</NavLink>
-					<div>Cestina</div>
+					<LngSelect />
 				</div>
 				<div className={styles["header__bottom"]}>
 					<div className={styles["header__bottom-logo"]}>Flovas</div>

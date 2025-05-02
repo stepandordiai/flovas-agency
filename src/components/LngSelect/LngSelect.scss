@@ -1,0 +1,56 @@
+@use "./../../mixins" as *;
+
+.lng-select {
+	position: relative;
+}
+
+.lng-select__btn {
+	@include flex-center;
+	column-gap: 5px;
+
+	span,
+	img {
+		pointer-events: none;
+	}
+}
+
+.lng-select__list {
+	position: absolute;
+	right: -10px;
+	z-index: 1;
+	width: max-content;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	row-gap: 5px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 5px;
+	border-radius: 10px;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s;
+}
+
+.lng-select__list--visible {
+	opacity: 1 !important;
+	pointer-events: all !important;
+}
+
+.lng-select__option {
+	@include flex-center;
+	column-gap: 5px;
+	background: transparent;
+	color: #000;
+	border-radius: 15px;
+	padding: 5px 5px 5px 7.5px;
+	cursor: pointer;
+
+	&:hover {
+		background: orange;
+	}
+}
+
+.lng-select__option--active {
+	background: orange;
+}
