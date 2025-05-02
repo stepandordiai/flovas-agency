@@ -4,6 +4,16 @@
 @use "fonts";
 
 body {
-	height: 2000px;
+	// height: 2000px;
+	position: relative;
+	height: 100dvh;
 	font-family: "Urbanist", sans-serif;
+	background: #f1eded;
+	// padding: 75px 25px 25px;
 }
+
+// @media screen and (width <= 896px) {
+// 	body {
+// 		padding: 50px 10px 10px;
+// 	}
+// }
