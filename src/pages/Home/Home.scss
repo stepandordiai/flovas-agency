@@ -24,16 +24,27 @@
 }
 
 .home {
+	min-height: 100vh;
 	scrollbar-width: none;
 	position: absolute;
-	top: 75px;
-	right: 25px;
+	top: 275px;
+	right: 125px;
 	bottom: 0;
-	left: 25px;
+	left: 125px;
 	border-radius: 25px;
+	animation: animateHome 1s forwards;
+}
+
+@keyframes animateHome {
+	to {
+		top: 75px;
+		right: 25px;
+		left: 25px;
+	}
 }
 
 .home-inner {
+	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -44,6 +55,21 @@
 
 .title-container {
 	margin-bottom: 100px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	row-gap: 50px;
+}
+
+.blur-char {
+	filter: blur(10px);
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+.blur-char--active {
+	opacity: 1 !important;
+	filter: blur(0) !important;
 }
 
 .home__title {
@@ -65,12 +91,52 @@
 
 	span[data-show] {
 		transform: translateY(0);
-		transition: transform 0.5s ease-in-out;
+		transition: transform 0.5s;
 	}
 
 	span[data-up] {
 		transform: translateY(-76.67px);
-		transition: transform 0.5s ease-in-out;
+		transition: transform 0.5s;
+	}
+}
+
+.home__link-container {
+	display: flex;
+	column-gap: 5px;
+	background: #000;
+	height: 60px;
+	border-radius: 30px;
+	padding: 5px;
+	filter: blur(10px);
+	opacity: 0;
+	pointer-events: none;
+	animation: animateLinkContainer 1s 2s forwards;
+}
+
+@keyframes animateLinkContainer {
+	to {
+		pointer-events: all;
+		opacity: 1;
+		filter: blur(0);
+	}
+}
+
+.home__link {
+	background: white;
+	color: #000;
+	border-radius: 25px;
+	padding: 0 12.5px;
+	display: grid;
+	place-content: center;
+	transition: all 0.3s;
+
+	&:hover:nth-child(1) {
+		background: var(--accent-clr);
+	}
+
+	&:hover:nth-child(2) {
+		background: #000;
+		color: #fff;
 	}
 }
 
@@ -127,10 +193,47 @@ form {
 
 @media screen and (width <= 896px) {
 	.home {
-		top: 50px;
-		right: 10px;
-		bottom: 10px;
-		left: 10px;
+		min-height: 100vh;
+		scrollbar-width: none;
+		position: absolute;
+		top: 175px;
+		right: 75px;
+		bottom: 0;
+		left: 75px;
+		border-radius: 25px;
+		animation: animateHome 1s forwards;
+	}
+
+	@keyframes animateHome {
+		to {
+			top: 50px;
+			right: 10px;
+			left: 10px;
+		}
+	}
+
+	.home__title {
+		font-size: 2rem;
+	}
+
+	.home__rotate-container {
+		position: relative;
+		@include flex-center;
+		height: 38.67px;
+		overflow: hidden;
+
+		span {
+			position: absolute;
+			transform: translateY(38.67px);
+		}
+
+		span[data-show] {
+			transform: translateY(0);
+		}
+
+		span[data-up] {
+			transform: translateY(-38.67px);
+		}
 	}
 }
 
