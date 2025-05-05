@@ -38,15 +38,17 @@
 	flex-direction: column;
 	row-gap: 5px;
 
-	button:nth-last-child(1) {
-		background: var(--accent-clr);
-		color: #000;
+	button {
+		color: #fff;
+		background: #000;
 	}
 }
 
 .job-card__link {
 	display: grid;
 	place-content: center;
+	background: var(--accent-clr);
+	color: #000;
 	height: 50px;
 	border-radius: 25px;
 	padding: 0 12.5px;
@@ -55,15 +57,5 @@
 
 	&:hover {
 		scale: 0.95;
-	}
-
-	&:nth-child(1) {
-		background: var(--accent-clr);
-		color: #000;
-	}
-
-	&:nth-child(2) {
-		background: #000;
-		color: #fff;
 	}
 }

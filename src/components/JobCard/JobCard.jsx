@@ -1,9 +1,22 @@
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 import pinIcon from "/icons/pin.png";
 import jobImg from "/job-img/6.jpg";
 import "./JobCard.scss";
 
 const JobCard = ({ job }) => {
+	useEffect(() => {
+		document.querySelectorAll(".job-card__contact-us-link").forEach((btn) => {
+			btn.addEventListener("click", () => {
+				document
+					.querySelector(".contact-us")
+					.classList.add("contact-us--active");
+				document
+					.querySelector(".bg-curtain")
+					.classList.add("bg-curtain--active");
+			});
+		});
+	}, []);
 	return (
 		<>
 			<div className={"job-card"}>
@@ -23,9 +36,9 @@ const JobCard = ({ job }) => {
 					<NavLink className={"job-card__link"} to={"job-page"}>
 						Další informace
 					</NavLink>
-					<NavLink className={"job-card__link"} to={"contact-us"}>
+					<button className={"job-card__link job-card__contact-us-link"}>
 						Kontaktujte nás
-					</NavLink>
+					</button>
 				</div>
 			</div>
 		</>

@@ -6,7 +6,11 @@
 	border-radius: 50%;
 	display: grid;
 	place-content: center;
-	background: conic-gradient(white, var(--accent-clr));
+	background: conic-gradient(
+		var(--secondary-clr),
+		var(--accent-clr),
+		var(--secondary-clr)
+	);
 	animation: animateLoading 2s linear infinite;
 
 	div {
@@ -213,18 +217,18 @@ form {
 	}
 
 	.home__title {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 
 	.home__rotate-container {
 		position: relative;
 		@include flex-center;
-		height: 38.67px;
+		height: 48px;
 		overflow: hidden;
 
 		span {
 			position: absolute;
-			transform: translateY(38.67px);
+			transform: translateY(48px);
 		}
 
 		span[data-show] {
@@ -232,7 +236,7 @@ form {
 		}
 
 		span[data-up] {
-			transform: translateY(-38.67px);
+			transform: translateY(-48px);
 		}
 	}
 }

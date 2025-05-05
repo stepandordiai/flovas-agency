@@ -3,6 +3,7 @@ import axios from "axios";
 import JobCard from "../../components/JobCard/JobCard";
 import "./Home.scss";
 import { NavLink } from "react-router-dom";
+import ContactUs from "../../components/ContactUs/ContactUs";
 
 const Home = () => {
 	const placesData = ["Prague", "Kolin", "Brno", "Ostrava", "Pardubice"];
@@ -64,6 +65,17 @@ const Home = () => {
 			customInterval = setInterval(rotateWord, 3000);
 		}, 2000);
 
+		document
+			.querySelector(".home__contact-us-link")
+			.addEventListener("click", () => {
+				document
+					.querySelector(".contact-us")
+					.classList.add("contact-us--active");
+				document
+					.querySelector(".bg-curtain")
+					.classList.add("bg-curtain--active");
+			});
+
 		return () => {
 			clearInterval(customInterval);
 		};
@@ -111,9 +123,9 @@ const Home = () => {
 							<NavLink className={"home__link"} to={"jobs"}>
 								Kariera
 							</NavLink>
-							<NavLink className={"home__link"} to={"contact-us"}>
+							<button className={"home__link home__contact-us-link"}>
 								Kontaktujte nás
-							</NavLink>
+							</button>
 						</div>
 					</div>
 					{loading === true ? (
@@ -128,6 +140,7 @@ const Home = () => {
 						</div>
 					)}
 				</div>
+				<ContactUs />
 			</div>
 		</>
 	);
