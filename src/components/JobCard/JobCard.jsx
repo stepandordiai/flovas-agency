@@ -1,6 +1,7 @@
-import "./JobCard.scss";
+import { NavLink } from "react-router-dom";
 import pinIcon from "/icons/pin.png";
 import jobImg from "/job-img/6.jpg";
+import "./JobCard.scss";
 
 const JobCard = ({ job }) => {
 	return (
@@ -18,7 +19,14 @@ const JobCard = ({ job }) => {
 				</div>
 				<p className={"job-card__title"}>{job.title}</p>
 				<p style={{ marginBottom: 10 }}>{job.info}</p>
-				<button>Další informace</button>
+				<div className="job-card__link-container">
+					<NavLink className={"job-card__link"} to={"job-page"}>
+						Další informace
+					</NavLink>
+					<NavLink className={"job-card__link"} to={"contact-us"}>
+						Kontaktujte nás
+					</NavLink>
+				</div>
 			</div>
 		</>
 	);

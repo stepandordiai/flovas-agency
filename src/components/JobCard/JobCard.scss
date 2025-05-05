@@ -4,22 +4,11 @@
 	background: #eeeeee;
 	padding: 10px;
 	border-radius: 25px;
-	cursor: pointer;
+	// cursor: pointer;
 
-	&:hover {
-		background: var(--accent-clr);
-	}
-
-	button {
-		margin-top: auto;
-		background: var(--secondary-clr);
-		margin-top: auto;
-		height: 50px;
-		border-radius: 25px;
-		padding: 0 12.5px;
-		width: 100%;
-		color: #fff;
-	}
+	// &:hover {
+	// 	background: var(--accent-clr);
+	// }
 }
 
 .job-card__img {
@@ -41,4 +30,40 @@
 	font-size: 1.5rem;
 	font-weight: 600;
 	margin-bottom: 10px;
+}
+
+.job-card__link-container {
+	margin-top: auto;
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+
+	button:nth-last-child(1) {
+		background: var(--accent-clr);
+		color: #000;
+	}
+}
+
+.job-card__link {
+	display: grid;
+	place-content: center;
+	height: 50px;
+	border-radius: 25px;
+	padding: 0 12.5px;
+	width: 100%;
+	transition: scale 0.3s;
+
+	&:hover {
+		scale: 0.95;
+	}
+
+	&:nth-child(1) {
+		background: var(--accent-clr);
+		color: #000;
+	}
+
+	&:nth-child(2) {
+		background: #000;
+		color: #fff;
+	}
 }
