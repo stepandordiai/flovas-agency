@@ -22,21 +22,30 @@
 	margin-bottom: 200px;
 }
 
-.home-title {
+.home__title {
 	text-align: center;
 	font-size: 3rem;
 }
 
-.home-sec-title {
-	text-align: center;
-	font-size: 2rem;
+.home__rotate-container {
+	position: relative;
+	@include flex-center;
+	height: 57.33px;
+	overflow: hidden;
 
-	span:nth-of-type(1) {
-		font-weight: 600;
+	span {
+		position: absolute;
+		transform: translateY(57.33px);
 	}
 
-	span:nth-of-type(2) {
-		font-weight: 200;
+	span[data-show] {
+		transform: translateY(0);
+		transition: transform 0.5s ease-in-out;
+	}
+
+	span[data-up] {
+		transform: translateY(-57.33px);
+		transition: transform 0.5s ease-in-out;
 	}
 }
 
@@ -49,11 +58,9 @@
 .input-container {
 	display: flex;
 	flex-direction: column;
-	// position: relative;
 }
 
 label {
-	// position: absolute;
 	color: #000;
 	padding-left: 15px;
 	padding-bottom: 5px;
@@ -61,7 +68,6 @@ label {
 
 input {
 	border: 1px solid rgba(255, 255, 255, 0.5);
-	// background: #fff;
 	background: rgba(255, 255, 255, 0.1);
 	padding: 15px;
 	height: 60px;

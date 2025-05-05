@@ -9,8 +9,8 @@ const BurgerBtn = () => {
 	}
 	return (
 		<>
-			<div onClick={toggleBurger3} class="burger-3">
-				<span class="burger-3__center-line"></span>
+			<div onClick={toggleBurger3} className="burger-3">
+				<span className="burger-3__center-line"></span>
 			</div>
 		</>
 	);
