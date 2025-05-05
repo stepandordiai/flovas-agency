@@ -140,8 +140,8 @@ const Home = () => {
 						</div>
 					)}
 				</div>
-				<ContactUs />
 			</div>
+			<ContactUs />
 		</>
 	);
 };
