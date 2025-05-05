@@ -19,7 +19,9 @@ const Home = () => {
 				"https://flovas-crud.onrender.com/api/products"
 			);
 			setData(response.data);
-			setLoading(false);
+			setTimeout(() => {
+				setLoading(false);
+			}, 2000);
 		} catch (error) {
 			console.log(error);
 			setLoading(false);
@@ -73,51 +75,13 @@ const Home = () => {
 							<span style={{ fontWeight: 200 }}>agentura</span>
 						</div>
 					</div>
-
-					{/* <div className={"search-container"]}>
-					<p className={"title"]}>
-						Najít si lepší práci a pracovní prostor
-					</p>
-					<p className={"sec-title"]}>{`Founded jobd: ${
-						loading ? "Loading..." : matchingJobs.length
-					}`}</p>
-					<form action="" className={"search-input-container"]}>
-						<div className={"input-container"]}>
-							<label htmlFor="what">Co</label>
-							<input
-								onChange={(e) => setWhat(e.target.value)}
-								id="what"
-								type="text"
-								placeholder={`Například \"elektrikář\"`}
-							/>
+					{loading === true ? (
+						<div className="loading">
+							<div></div>
 						</div>
-						<div className={"input-container"]}>
-							<label htmlFor="where">Kde</label>
-							<input
-								onChange={(e) => setWhere(e.target.value)}
-								id="where"
-								type="text"
-								placeholder={`Například \"Kolín\"`}
-							/>
-						</div>
-						<button
-							onClick={handleFormSubmit}
-							type="submit"
-							className={"search-btn"]}
-						>
-							Search
-						</button>
-					</form>
-				</div> */}
-					<div className={"jobs-container"}>
-						{data
-							// .filter((job) => {
-							// 	return what === "" && where === ""
-							// 		? job
-							// 		: job.title.toLowerCase().startsWith(what.toLowerCase()) &&
-							// 				job.place.toLowerCase().startsWith(where.toLowerCase());
-							// })
-							.map((job, index) => {
+					) : (
+						<div className={"jobs-container"}>
+							{data.map((job, index) => {
 								return (
 									<React.Fragment key={index}>
 										<div className={"job-container"}>
@@ -141,40 +105,8 @@ const Home = () => {
 									</React.Fragment>
 								);
 							})}
-					</div>
-					<div className={"jobs-container"}>
-						{data
-							// .filter((job) => {
-							// 	return what === "" && where === ""
-							// 		? job
-							// 		: job.title.toLowerCase().startsWith(what.toLowerCase()) &&
-							// 				job.place.toLowerCase().startsWith(where.toLowerCase());
-							// })
-							.map((job, index) => {
-								return (
-									<React.Fragment key={index}>
-										<div className={"job-container"}>
-											<img
-												className={"job-container__img"}
-												src={jobImg}
-												alt=""
-											/>
-											<div className={"job-container__header"}>
-												<p>
-													<img width={20} src={pinIcon} alt="" />
-													{job.place}
-												</p>
-												<p className={"job-container__date"}>
-													Vloženo {job.createdAt.slice(0, 10)}
-												</p>
-											</div>
-											<p className={"job-container__title"}>{job.title}</p>
-											<p>{job.info}</p>
-										</div>
-									</React.Fragment>
-								);
-							})}
-					</div>
+						</div>
+					)}
 				</div>
 			</div>
 		</>

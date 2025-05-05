@@ -1,5 +1,28 @@
 @use "./../../mixins" as *;
 
+.loading {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: grid;
+	place-content: center;
+	background: conic-gradient(white, var(--accent-clr));
+	animation: animateLoading 2s linear infinite;
+
+	div {
+		height: 80px;
+		aspect-ratio: 1/1;
+		background: #fff;
+		border-radius: 50%;
+	}
+}
+
+@keyframes animateLoading {
+	to {
+		rotate: 360deg;
+	}
+}
+
 .home {
 	scrollbar-width: none;
 	position: absolute;
@@ -12,6 +35,9 @@
 }
 
 .home-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	padding-top: 300px;
 	background: #fff;
 	border-radius: 25px;
