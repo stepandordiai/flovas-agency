@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./Header.scss";
 import { NavLink, useLocation } from "react-router-dom";
 import LngSelect from "../LngSelect/LngSelect";
+import BurgerBtn from "../BurgerBtn/BurgerBtn";
 
 const Header = () => {
 	const indicatorRef = useRef(null);
@@ -31,6 +32,7 @@ const Header = () => {
 	return (
 		<>
 			<header className={"header"}>
+				<BurgerBtn />
 				<NavLink to={"/"} className={"header__logo"}>
 					Flovas <span>agentura</span>
 				</NavLink>
