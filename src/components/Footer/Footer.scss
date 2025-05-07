@@ -116,6 +116,15 @@ a {
 		right: 10px;
 	}
 
+	.footer-top {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+
 	.footer__nav-container {
 		justify-content: space-between;
 		gap: 50px;

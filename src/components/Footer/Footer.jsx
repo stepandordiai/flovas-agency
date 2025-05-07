@@ -6,16 +6,19 @@ import "./Footer.scss";
 const Footer = () => {
 	return (
 		<div className="footer">
-			<div>
+			<div className="footer-top">
 				<p className="footer__logo">Flovas</p>
 				<div className="footer__socials">
-					<a href={""}>
+					<a style={{ pointerEvents: "none" }} href={""}>
 						<img width={30} src={instagramIcon} alt="" />
 					</a>
-					<a href={""}>
+					<a style={{ pointerEvents: "none" }} href={""}>
 						<img width={30} src={tiktokIcon} alt="" />
 					</a>
-					<a href={"https://www.facebook.com/profile.php?id=61565186673220"}>
+					<a
+						href={"https://www.facebook.com/profile.php?id=61565186673220"}
+						target="_blank"
+					>
 						<img width={30} src={facebookIcon} alt="" />
 					</a>
 				</div>
@@ -35,8 +38,12 @@ const Footer = () => {
 				</div>
 				<div className="footer__nav-list">
 					<p className="footer__nav-list-title">Follow us</p>
-					<a href="">Instagram</a>
-					<a href="">TokTok</a>
+					<a style={{ pointerEvents: "none" }} href="">
+						Instagram
+					</a>
+					<a style={{ pointerEvents: "none" }} href="">
+						TikTok
+					</a>
 					<a
 						href="https://www.facebook.com/profile.php?id=61565186673220"
 						target="_blank"
@@ -55,7 +62,10 @@ const Footer = () => {
 				<div className="footer-bottom__list">
 					<div className="footer-bottom__item" style={{ "--position": "1" }}>
 						<p>
-							Site by <a href="https://heeeyooo.studio/">heeeyooo.studio</a>
+							Site by{" "}
+							<a href="https://heeeyooo.studio/" target="_blank">
+								heeeyooo.studio
+							</a>
 						</p>
 					</div>
 					<div className="footer-bottom__item" style={{ "--position": "2" }}>
@@ -63,7 +73,10 @@ const Footer = () => {
 					</div>
 					<div className="footer-bottom__item" style={{ "--position": "3" }}>
 						<p>
-							Site by <a href="https://heeeyooo.studio/">heeeyooo.studio</a>
+							Site by{" "}
+							<a href="https://heeeyooo.studio/" target="_blank">
+								heeeyooo.studio
+							</a>
 						</p>
 					</div>
 					<div className="footer-bottom__item" style={{ "--position": "4" }}>
@@ -71,7 +84,10 @@ const Footer = () => {
 					</div>
 					<div className="footer-bottom__item" style={{ "--position": "5" }}>
 						<p>
-							Site by <a href="https://heeeyooo.studio/">heeeyooo.studio</a>
+							Site by{" "}
+							<a href="https://heeeyooo.studio/" target="_blank">
+								heeeyooo.studio
+							</a>
 						</p>
 					</div>
 					<div className="footer-bottom__item" style={{ "--position": "6" }}>
