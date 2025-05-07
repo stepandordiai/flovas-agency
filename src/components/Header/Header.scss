@@ -1,13 +1,14 @@
 @use "./../../mixins" as *;
 
 .header {
+	display: flex;
+	flex-direction: column;
 	position: fixed;
 	top: 0;
 	right: 0;
 	left: 0;
 	z-index: 2;
 	min-height: 75px;
-	@include flex-between-center;
 	padding: 0 25px;
 	background: var(--bg-clr);
 }
@@ -15,7 +16,8 @@
 .header::before {
 	content: "";
 	position: absolute;
-	top: 75px;
+	bottom: 0;
+	transform: translateY(100%);
 	left: 25px;
 	width: 50px;
 	z-index: -1;
@@ -29,7 +31,8 @@
 .header::after {
 	content: "";
 	position: absolute;
-	top: 75px;
+	bottom: 0;
+	transform: translateY(100%);
 	right: 25px;
 	width: 50px;
 	z-index: -1;
@@ -38,6 +41,15 @@
 	background: transparent;
 	box-shadow: 25px -25px var(--bg-clr);
 	pointer-events: none;
+}
+
+.header-top {
+	position: relative;
+	height: 75px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
 }
 
 .header__logo {
@@ -89,7 +101,6 @@
 	.header::before {
 		content: "";
 		position: absolute;
-		top: 50px;
 		left: 10px;
 		width: 50px;
 		aspect-ratio: 1/1;
@@ -102,7 +113,6 @@
 	.header::after {
 		content: "";
 		position: absolute;
-		top: 50px;
 		right: 10px;
 		width: 50px;
 		aspect-ratio: 1/1;
@@ -110,6 +120,10 @@
 		background: transparent;
 		box-shadow: 25px -25px var(--bg-clr);
 		pointer-events: none;
+	}
+
+	.header-top {
+		height: 50px;
 	}
 
 	.header__logo {

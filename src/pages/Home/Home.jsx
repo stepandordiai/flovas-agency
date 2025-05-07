@@ -83,9 +83,9 @@ const Home = () => {
 
 	return (
 		<>
-			<div className={"home"}>
+			<div className={"home"} id="home">
 				<div className={"home-inner"}>
-					<div className={"title-container"}>
+					<div className={"homie title-container"}>
 						<div className={"home__title"}>
 							{"Hledat práci v".split("").map((char, index) => {
 								return (
@@ -128,17 +128,25 @@ const Home = () => {
 							</button>
 						</div>
 					</div>
-					{loading === true ? (
-						<div className="loading">
-							<div></div>
-						</div>
-					) : (
-						<div className={"jobs-container"}>
-							{data.map((job, index) => {
-								return <JobCard key={index} job={job} />;
-							})}
-						</div>
-					)}
+					<div className="jobs">
+						{loading === true ? (
+							<div className="loading">
+								<div></div>
+							</div>
+						) : (
+							<div className={"jobs-container"} id="jobs">
+								{data.map((job, index) => {
+									return <JobCard key={index} job={job} />;
+								})}
+							</div>
+						)}
+					</div>
+					<div className="about-us" id="about-us">
+						<p>About us</p>
+					</div>
+					<div className="contacts" id="contacts">
+						<p>Contacts</p>
+					</div>
 				</div>
 			</div>
 			<ContactUs />

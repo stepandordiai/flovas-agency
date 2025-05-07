@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import "./Header.scss";
 import { NavLink, useLocation } from "react-router-dom";
 import LngSelect from "../LngSelect/LngSelect";
-import BurgerBtn from "../BurgerBtn/BurgerBtn";
+import MenuBtn from "../MenuBtn/MenuBtn";
+import Menu from "../Menu/Menu";
 
 const Header = () => {
 	const indicatorRef = useRef(null);
@@ -20,42 +21,77 @@ const Header = () => {
 		}
 	};
 
-	useEffect(() => {
+	function getRect() {
+		const homeRect = document.querySelector(".homie").getBoundingClientRect();
+		const jobsRect = document.querySelector(".jobs").getBoundingClientRect();
+		const aboutUsRect = document
+			.querySelector(".about-us")
+			.getBoundingClientRect();
+		const contactsRect = document
+			.querySelector(".contacts")
+			.getBoundingClientRect();
+		const navLinks = document.querySelectorAll(".nav-link");
+
+		for (let i = 0; i < navLinks.length; i++) {
+			navLinks[i].classList.remove("active");
+		}
+		if (homeRect.top <= 0 && homeRect.bottom >= 45) {
+			navLinks[0].classList.add("active");
+		}
+		if (jobsRect.top <= 45 && jobsRect.bottom >= 45) {
+			navLinks[1].classList.add("active");
+		}
+		if (aboutUsRect.top <= 45 && aboutUsRect.bottom >= 45) {
+			navLinks[2].classList.add("active");
+		}
+		if (contactsRect.top <= 45 && contactsRect.bottom >= 45) {
+			navLinks[3].classList.add("active");
+		}
+
 		updateIndicator();
-		window.addEventListener("resize", updateIndicator); // Recalculate on resize
-		// TODO:
+	}
+
+	useEffect(() => {
+		document.addEventListener("scroll", () => {
+			getRect();
+		});
+		updateIndicator();
+
 		return () => {
-			window.removeEventListener("resize", updateIndicator);
+			removeEventListener("scroll", getRect);
 		};
-	}, [location.pathname]); // Re-run on path change
+	}, []); // Re-run on path change
 
 	return (
 		<>
 			<header className={"header"}>
-				<BurgerBtn />
-				<NavLink to={"/"} className={"header__logo"}>
-					Flovas <span>agentura</span>
-				</NavLink>
-				<nav ref={navRef} className="header__nav">
-					<NavLink className={"nav-link"} to={"/"}>
-						Uvod
+				<div className="header-top">
+					<MenuBtn />
+					<NavLink to={"/"} className={"header__logo"}>
+						Flovas <span>agentura</span>
 					</NavLink>
-					<NavLink className={"nav-link"} to={"/about-us"}>
-						O nas
-					</NavLink>
-					<NavLink className={"nav-link"} to={"/carrier"}>
-						Kariera
-					</NavLink>
-					<NavLink className={"nav-link"} to={"/contacts"}>
-						Kontakty
-					</NavLink>
-					<div
-						className={"nav-link-indicator"}
-						ref={indicatorRef}
-						style={indicatorStyle}
-					></div>
-				</nav>
-				<LngSelect />
+					<nav ref={navRef} className="header__nav">
+						<a className={"nav-link active"} href={"#home"}>
+							Uvod
+						</a>
+						<a className={"nav-link"} href={"#jobs"}>
+							Kariera
+						</a>
+						<a className={"nav-link"} href={"#about-us"}>
+							O nas
+						</a>
+						<a className={"nav-link"} href={"#contacts"}>
+							Kontakty
+						</a>
+						<div
+							className={"nav-link-indicator"}
+							ref={indicatorRef}
+							style={indicatorStyle}
+						></div>
+					</nav>
+					<LngSelect />
+				</div>
+				<Menu />
 			</header>
 		</>
 	);

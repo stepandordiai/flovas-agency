@@ -31,7 +31,6 @@
 	position: relative;
 	z-index: 1;
 	border-radius: 25px;
-	// animation: animateHome 1s forwards;
 }
 
 @keyframes animateHome {
@@ -49,6 +48,14 @@
 	background: #fff;
 	border-radius: 25px;
 	padding: 100px 12.5px 12.5px;
+	margin-top: 75px;
+	min-height: calc(100vh - 100px);
+	transition: all 0.5s;
+}
+
+// 149.67px menu height
+.home-inner--active {
+	padding-top: 249.67px;
 }
 
 .title-container {
@@ -178,7 +185,6 @@ input {
 form {
 	padding: 30px;
 	border-radius: 30px;
-	// background: rgba(255, 255, 255, 0.1);
 }
 
 .search-btn {
@@ -191,25 +197,31 @@ form {
 
 .empty-div {
 	height: 100vh;
-	// background: red;
-	// width: 100%;
 	pointer-events: none;
+}
+
+.about-us {
+	height: 1000px;
+	background: var(--accent-clr);
+	width: 100%;
+}
+
+.contacts {
+	height: 1000px;
+	background: var(--secondary-clr);
+	width: 100%;
 }
 
 @media screen and (width <= 896px) {
 	.home {
-		// min-height: 100vh;
-		// scrollbar-width: none;
-		// position: absolute;
-		// top: 175px;
-		// right: 75px;
-		// bottom: 0;
-		// left: 75px;
-		// border-radius: 25px;
 		position: relative;
 		z-index: 1;
 		border-radius: 25px;
-		// animation: animateHome 1s forwards;
+	}
+
+	.home-inner {
+		margin-top: 50px;
+		min-height: calc(100vh - 100px);
 	}
 
 	@keyframes animateHome {

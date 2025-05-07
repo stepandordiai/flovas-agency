@@ -61,12 +61,7 @@ const Footer = () => {
 			>
 				<div className="footer-bottom__list">
 					<div className="footer-bottom__item" style={{ "--position": "1" }}>
-						<p>
-							Site by{" "}
-							<a href="https://heeeyooo.studio/" target="_blank">
-								heeeyooo.studio
-							</a>
-						</p>
+						<p>&copy; 2025 Flovas</p>
 					</div>
 					<div className="footer-bottom__item" style={{ "--position": "2" }}>
 						<p>All rights reserved</p>
@@ -80,18 +75,18 @@ const Footer = () => {
 						</p>
 					</div>
 					<div className="footer-bottom__item" style={{ "--position": "4" }}>
-						<p>All rights reserved</p>
+						<p>&copy; 2025 Flovas</p>
 					</div>
 					<div className="footer-bottom__item" style={{ "--position": "5" }}>
+						<p>All rights reserved</p>
+					</div>
+					<div className="footer-bottom__item" style={{ "--position": "6" }}>
 						<p>
 							Site by{" "}
 							<a href="https://heeeyooo.studio/" target="_blank">
 								heeeyooo.studio
 							</a>
 						</p>
-					</div>
-					<div className="footer-bottom__item" style={{ "--position": "6" }}>
-						<p>All rights reserved</p>
 					</div>
 				</div>
 			</div>
