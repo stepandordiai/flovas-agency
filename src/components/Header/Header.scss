@@ -9,7 +9,7 @@
 	min-height: 75px;
 	@include flex-between-center;
 	padding: 0 25px;
-	background: #e0dddd;
+	background: var(--bg-clr);
 }
 
 .header::before {
@@ -22,7 +22,7 @@
 	aspect-ratio: 1/1;
 	border-radius: 25px;
 	background: transparent;
-	box-shadow: -25px -25px #e0dddd;
+	box-shadow: -25px -25px var(--bg-clr);
 	pointer-events: none;
 }
 
@@ -36,7 +36,7 @@
 	aspect-ratio: 1/1;
 	border-radius: 25px;
 	background: transparent;
-	box-shadow: 25px -25px #e0dddd;
+	box-shadow: 25px -25px var(--bg-clr);
 	pointer-events: none;
 }
 
@@ -95,7 +95,7 @@
 		aspect-ratio: 1/1;
 		border-radius: 25px;
 		background: transparent;
-		box-shadow: -25px -25px #e0dddd;
+		box-shadow: -25px -25px var(--bg-clr);
 		pointer-events: none;
 	}
 
@@ -108,7 +108,7 @@
 		aspect-ratio: 1/1;
 		border-radius: 25px;
 		background: transparent;
-		box-shadow: 25px -25px #e0dddd;
+		box-shadow: 25px -25px var(--bg-clr);
 		pointer-events: none;
 	}
 

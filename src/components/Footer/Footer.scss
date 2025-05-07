@@ -1,20 +1,127 @@
+@use "./../../mixins" as *;
+
 .footer {
 	position: fixed;
-	bottom: 0;
 	top: 75px;
-	left: 25px;
 	right: 25px;
-	// z-index: -1;
+	bottom: 0;
+	left: 25px;
 	display: flex;
-	gap: 50px;
+	align-items: center;
+	gap: 20px;
 	padding: 25px;
 }
 
 .footer__logo {
-	font-size: 5rem;
+	font-size: clamp(5rem, 10vw, 10rem);
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.footer__socials {
+	display: flex;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.footer__nav-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	gap: 50px;
+	flex-wrap: wrap;
 }
 
 .footer__nav-list {
 	display: flex;
 	flex-direction: column;
+	justify-self: center;
+	row-gap: 5px;
+}
+
+.footer__nav-list-title {
+	font-size: 1.2rem;
+}
+
+a {
+	color: rgba(0, 0, 0, 0.5);
+	transition: all 0.2s;
+
+	&:hover {
+		color: #000;
+	}
+}
+
+.footer-bottom__slider {
+	position: absolute;
+	bottom: 25px;
+	right: 0;
+	left: 0;
+	background: #000;
+	height: 50px;
+	border-radius: 25px;
+	overflow: hidden;
+}
+
+.footer-bottom__list {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	width: 100%;
+	min-width: calc(var(--width) * var(--quantity));
+	position: relative;
+}
+
+.footer-bottom__item {
+	color: #fff;
+	width: var(--width);
+	position: absolute;
+	left: 100%;
+	@include grid-center;
+	animation: autoRun 20s linear infinite;
+	//
+	animation-delay: calc(
+		(20s / var(--quantity)) * (var(--position) - 1)
+	) !important;
+	//
+
+	a {
+		color: #fff;
+
+		&:hover {
+			color: var(--accent-clr);
+		}
+	}
+}
+
+.footer-bottom__slider:hover .footer-bottom__item {
+	animation-play-state: paused;
+}
+
+@keyframes autoRun {
+	from {
+		left: 100%;
+	}
+	to {
+		left: calc(var(--width) * -1);
+	}
+}
+
+@media screen and (width <= 896px) {
+	.footer {
+		padding: 0 10px;
+		flex-direction: column;
+		align-items: flex-start;
+		top: 50px;
+		left: 10px;
+		right: 10px;
+	}
+
+	.footer__nav-container {
+		justify-content: space-between;
+		gap: 50px;
+	}
+
+	.footer-bottom__slider {
+		bottom: 10px;
+	}
 }

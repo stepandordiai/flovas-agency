@@ -6,7 +6,7 @@
 body {
 	position: relative;
 	font-family: "Urbanist", sans-serif;
-	background: #e0dddd;
+	background: var(--bg-clr);
 	padding: 25px;
 }
 
@@ -14,4 +14,10 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+}
+
+@media screen and (width <= 896px) {
+	body {
+		padding: 10px;
+	}
 }
