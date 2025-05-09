@@ -1,1 +1,22 @@
-{}
+{
+	"logo_title": "agency",
+	"menu": "menu",
+	"choose_lng_title": "Choose your preferred language",
+	"home_title": "Home",
+	"jobs_title": "Vacancies",
+	"about_title": "About",
+	"contacts_title": "Contacts",
+	"more_info_btn": "More info",
+	"contact_us_title": "Contact us",
+
+	"home": {
+		"title1": "Search for jobs in",
+		"title2": "with Flovas agency",
+		"jobs_btn": "Vacancies"
+	},
+
+	"footer": {
+		"nav": "Navigation",
+		"follow_us": "Follow us"
+	}
+}

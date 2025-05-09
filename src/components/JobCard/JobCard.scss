@@ -3,7 +3,7 @@
 .job-card {
 	display: flex;
 	flex-direction: column;
-	background: #eeeeee;
+	background: var(--bg-lighter-clr);
 	padding: 10px;
 	border-radius: 25px;
 }

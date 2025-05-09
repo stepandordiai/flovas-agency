@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import React, { useEffect, useState } from "react";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Jobs from "../../components/Jobs/Jobs";
 import "./Home.scss";
@@ -7,6 +7,13 @@ import About from "../../components/About/About";
 import Contacts from "../../components/Contacts/Contacts";
 
 const Home = () => {
+	const { t, i18n } = useTranslation();
+	const [text, setText] = useState(t("home.title1"));
+
+	useEffect(() => {
+		setText(t("home.title1"));
+	}, [i18n.language]);
+
 	const placesData = [
 		"Prague",
 		"Kolin",
@@ -22,7 +29,7 @@ const Home = () => {
 				char.classList.add("blur-char--active");
 			}, index * 50);
 		});
-	}, []);
+	}, [text]);
 
 	function rotateWord() {
 		const dataShow = document.querySelector(
@@ -51,7 +58,7 @@ const Home = () => {
 				.querySelector(".home__rotate-container span")
 				.setAttribute("data-show", "");
 			customInterval = setInterval(rotateWord, 3000);
-		}, 2000);
+		}, 1000);
 
 		document
 			.querySelector(".home__contact-us-link")
@@ -75,11 +82,11 @@ const Home = () => {
 				<div className={"home-inner"}>
 					<div className={"homie title-container"}>
 						<div className={"home__title"}>
-							{"Hledat práci v".split("").map((char, index) => {
+							{text.split("").map((char, index) => {
 								return (
-									<React.Fragment key={index}>
-										<span className="blur-char">{char}</span>
-									</React.Fragment>
+									<span key={index} className="blur-char">
+										{char}
+									</span>
 								);
 							})}
 							<div className="home__rotate-container">
@@ -87,32 +94,24 @@ const Home = () => {
 									<span key={index}>{place}</span>
 								))}
 							</div>
-							<span className="blur-char">s</span>{" "}
-							<span style={{ fontWeight: 600 }}>
-								{"Flovas".split("").map((char, index) => {
-									return (
-										<React.Fragment key={index}>
-											<span className="blur-char">{char}</span>
-										</React.Fragment>
-									);
-								})}
-							</span>{" "}
-							<span style={{ fontWeight: 200 }}>
-								{"agentura".split("").map((char, index) => {
-									return (
-										<React.Fragment key={index}>
-											<span className="blur-char">{char}</span>
-										</React.Fragment>
-									);
-								})}
+							<span>
+								{t("home.title2")
+									.split("")
+									.map((char, index) => {
+										return (
+											<React.Fragment key={index}>
+												<span className="blur-char">{char}</span>
+											</React.Fragment>
+										);
+									})}
 							</span>
 						</div>
 						<div className="home__link-container">
 							<a className={"home__link"} href="#jobs">
-								Kariera
+								{t("jobs_title")}
 							</a>
 							<button className={"home__link home__contact-us-link"}>
-								Kontaktujte nás
+								{t("contact_us_title")}
 							</button>
 						</div>
 					</div>

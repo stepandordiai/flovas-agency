@@ -1,7 +1,10 @@
-import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 import "./Menu.scss";
 
 const Menu = () => {
+	const { t } = useTranslation();
+
 	useEffect(() => {
 		document.querySelectorAll(".menu__link").forEach((link) => {
 			link.addEventListener("click", () => {
@@ -22,25 +25,25 @@ const Menu = () => {
 				<div className="dot-link-container">
 					<div className="dot dot--active"></div>
 					<a className="menu__link" href="#home">
-						Головна
+						{t("home_title")}
 					</a>
 				</div>
 				<div className="dot-link-container">
 					<div className="dot"></div>
 					<a className="menu__link" href="#jobs">
-						Вакансії
+						{t("jobs_title")}
 					</a>
 				</div>
 				<div className="dot-link-container">
 					<div className="dot"></div>
 					<a className="menu__link" href="#about-us">
-						Про нас
+						{t("about_title")}
 					</a>
 				</div>
 				<div className="dot-link-container">
 					<div className="dot"></div>
 					<a className="menu__link" href="#contacts">
-						Контакти
+						{t("contacts_title")}
 					</a>
 				</div>
 			</div>

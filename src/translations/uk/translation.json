@@ -1,1 +1,22 @@
-{}
+{
+	"logo_title": "агенція",
+	"menu": "меню",
+	"choose_lng_title": "Виберіть бажану мову",
+	"home_title": "Головна",
+	"jobs_title": "Вакансії",
+	"about_title": "Про",
+	"contacts_title": "Контакти",
+	"more_info_btn": "Більше інформації",
+	"contact_us_title": "Зв'яжіться з нами",
+
+	"home": {
+		"title1": "Пошук роботи в",
+		"title2": "з агентством Flovas",
+		"jobs_btn": "Вакансії"
+	},
+
+	"footer": {
+		"nav": "Навігація",
+		"follow_us": "Слідкуйте за нами"
+	}
+}

@@ -1,14 +1,16 @@
+import { useTranslation } from "react-i18next";
 import { useEffect, useRef, useState } from "react";
 import "./Header.scss";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import LngSelect from "../LngSelect/LngSelect";
 import MenuBtn from "../MenuBtn/MenuBtn";
 import Menu from "../Menu/Menu";
 
 const Header = () => {
+	const { t } = useTranslation();
+
 	const indicatorRef = useRef(null);
 	const navRef = useRef(null);
-	const location = useLocation();
 	const [indicatorStyle, setIndicatorStyle] = useState({});
 
 	const updateIndicator = () => {
@@ -68,20 +70,20 @@ const Header = () => {
 				<div className="header-top">
 					<MenuBtn />
 					<NavLink to={"/"} className={"header__logo"}>
-						Flovas <span>агенція</span>
+						Flovas <span>{t("logo_title")}</span>
 					</NavLink>
 					<nav ref={navRef} className="header__nav">
 						<a className={"nav-link active"} href={"#home"}>
-							Головна
+							{t("home_title")}
 						</a>
 						<a className={"nav-link"} href={"#jobs"}>
-							Вакансії
+							{t("jobs_title")}
 						</a>
 						<a className={"nav-link"} href={"#about-us"}>
-							Про нас
+							{t("about_title")}
 						</a>
 						<a className={"nav-link"} href={"#contacts"}>
-							Контакти
+							{t("contacts_title")}
 						</a>
 						<div
 							className={"nav-link-indicator"}

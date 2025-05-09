@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 import instagramIcon from "/icons/instagram.png";
 import tiktokIcon from "/icons/tiktok.png";
 import facebookIcon from "/icons/facebook.png";
 import "./Footer.scss";
 
 const Footer = () => {
+	const { t } = useTranslation();
+
 	return (
 		<div className="footer">
 			<div className="footer-inner">
@@ -26,19 +29,19 @@ const Footer = () => {
 				</div>
 				<div className="footer__nav-container">
 					<div className="footer__nav-list">
-						<p className="footer__nav-list-title">Навігація сайту</p>
-						<a href="#home">Головна</a>
-						<a href="#jobs">Вакансії</a>
-						<a href="#about-us">Про нас</a>
-						<a href="#contacts">Контакти</a>
+						<p className="footer__nav-list-title">{t("footer.nav")}</p>
+						<a href="#home">{t("home_title")}</a>
+						<a href="#jobs">{t("jobs_title")}</a>
+						<a href="#about-us">{t("about_title")}</a>
+						<a href="#contacts">{t("contacts_title")}</a>
 					</div>
 					<div className="footer__nav-list">
-						<p className="footer__nav-list-title">Зв'яжіться з нами</p>
+						<p className="footer__nav-list-title">{t("contact_us_title")}</p>
 						<a href="tel:+420777957290">+420 777 957 290</a>
 						<a href="mailto:work1agency@seznam.cz">work1agency@seznam.cz</a>
 					</div>
 					<div className="footer__nav-list">
-						<p className="footer__nav-list-title">Слідкуйте за нами</p>
+						<p className="footer__nav-list-title">{t("footer.follow_us")}</p>
 						<a style={{ pointerEvents: "none" }} href="">
 							Instagram
 						</a>
@@ -66,7 +69,7 @@ const Footer = () => {
 						<p>&copy; 2025 Flovas</p>
 					</div>
 					<div className="footer-bottom__item" style={{ "--position": "2" }}>
-						<p>All rights reserved</p>
+						<p>Всі права захищені</p>
 					</div>
 					<div className="footer-bottom__item" style={{ "--position": "3" }}>
 						<p>
@@ -80,7 +83,7 @@ const Footer = () => {
 						<p>&copy; 2025 Flovas</p>
 					</div>
 					<div className="footer-bottom__item" style={{ "--position": "5" }}>
-						<p>All rights reserved</p>
+						<p>Всі права захищені</p>
 					</div>
 					<div className="footer-bottom__item" style={{ "--position": "6" }}>
 						<p>

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import pinIcon from "/icons/pin.png";
@@ -5,6 +6,8 @@ import jobImg from "/job-img/6.jpg";
 import "./JobCard.scss";
 
 const JobCard = ({ job }) => {
+	const { t } = useTranslation();
+
 	// useEffect(() => {
 	// 	document.querySelectorAll(".job-card__contact-us-link").forEach((btn) => {
 	// 		btn.addEventListener("click", () => {
@@ -27,7 +30,7 @@ const JobCard = ({ job }) => {
 						{job.place}
 					</p>
 					<p className={"job-card__date"}>
-						Vloženo
+						Vloženo 9/5/25
 						{/* {job.createdAt.slice(0, 10)} */}
 					</p>
 				</div>
@@ -35,10 +38,10 @@ const JobCard = ({ job }) => {
 				<p style={{ marginBottom: 10 }}>{job.details}</p>
 				<div className="job-card__link-container">
 					<NavLink className={"job-card__link"} to={"job-page"}>
-						Další informace
+						{t("more_info_btn")}
 					</NavLink>
 					<a className={"job-card__tel-link"} href="tel:+420777957290">
-						Kontaktujte nás
+						{t("contact_us_title")}
 					</a>
 				</div>
 			</div>

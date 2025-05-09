@@ -1,1 +1,21 @@
-{}
+{
+	"logo_title": "agentura",
+	"menu": "menu",
+	"choose_lng_title": "Vyberte preferovaný jazyk",
+	"home_title": "Úvod",
+	"jobs_title": "Pracovní místa",
+	"about_title": "O",
+	"contacts_title": "Kontakty",
+	"more_info_btn": "Více informací",
+	"contact_us_title": "Kontaktujte nás",
+
+	"home": {
+		"title1": "Hledání práce v",
+		"title2": "s agenturou Flovas"
+	},
+
+	"footer": {
+		"nav": "Navigace",
+		"follow_us": "Sledujte nás"
+	}
+}

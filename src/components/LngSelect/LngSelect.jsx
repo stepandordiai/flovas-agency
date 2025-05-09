@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import i18n from "i18next";
 import csIcon from "/lng-icons/czech-republic.png";
@@ -6,6 +7,8 @@ import ukIcon from "/lng-icons/ukraine.png";
 import "./LngSelect.scss";
 
 const LanguageSelect = () => {
+	const { t } = useTranslation();
+
 	let lngSelectBtnTxt = "Čeština";
 	let lngSelectBtnIcon = csIcon;
 	useEffect(() => {
@@ -90,7 +93,7 @@ const LanguageSelect = () => {
 			</div>
 			<div className="lng-select-banner">
 				<div className="lng-select-list-container">
-					<p>Оберіть бажану мову</p>
+					<p>{t("choose_lng_title")}</p>
 					<ul className="lng-select__list">
 						<li
 							className={
