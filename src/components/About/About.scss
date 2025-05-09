@@ -38,3 +38,13 @@
 	padding: 25px;
 	font-size: clamp(2rem, 4vw, 3rem);
 }
+
+@media screen and (width <= 896px) {
+	.about {
+		scroll-margin-top: 50px;
+	}
+
+	.about__title {
+		padding: 10px;
+	}
+}

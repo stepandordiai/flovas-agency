@@ -26,7 +26,6 @@
 	top: 0;
 	right: 0;
 	z-index: -1;
-	// transform: translateY(-100%);
 	width: 50px;
 	aspect-ratio: 1/1;
 	border-radius: 50%;
@@ -36,4 +35,14 @@
 .contacts__title {
 	padding: 25px;
 	font-size: clamp(2rem, 4vw, 3rem);
+}
+
+@media screen and (width <= 896px) {
+	.contacts {
+		scroll-margin-top: 50px;
+	}
+
+	.contacts__title {
+		padding: 10px;
+	}
 }

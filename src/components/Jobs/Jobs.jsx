@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import React, { useState, useEffect } from "react";
 // import axios from "axios";
 import JobCard from "../../components/JobCard/JobCard";
@@ -5,6 +6,8 @@ import data from "./../../data/jobs.json";
 import "./Jobs.scss";
 
 const Jobs = () => {
+	const { t } = useTranslation();
+
 	// console.log(data);
 	// const [loading, setLoading] = useState(true);
 
@@ -31,7 +34,7 @@ const Jobs = () => {
 
 	return (
 		<div className="jobs" id="jobs">
-			<h2 className="jobs__title">Вакансії</h2>
+			<h2 className="jobs__title">{t("jobs_title")}</h2>
 			{/* {loading === true ? (
 				<div className="loading">
 					<div></div>

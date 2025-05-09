@@ -81,7 +81,7 @@
 
 .home__title {
 	text-align: center;
-	font-size: 4rem;
+	font-size: clamp(2rem, 4vw, 3rem) !important;
 }
 
 .home__rotate-container {
@@ -198,7 +198,9 @@ form {
 }
 
 .empty-div {
-	height: 100vh;
+	//
+	height: 100dvh;
+	//
 	pointer-events: none;
 }
 

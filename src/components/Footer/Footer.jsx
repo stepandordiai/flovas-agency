@@ -7,22 +7,25 @@ import "./Footer.scss";
 const Footer = () => {
 	const { t } = useTranslation();
 
+	const instagramUrl =
+		"https://www.instagram.com/robota1cz/?igsh=MTNmaTU0YWRlenRxag%3D%3D&utm_source=qr#";
+	const tiktokUrl = "https://www.tiktok.com/@robota1cz?_t=ZN-8wDLULhhMGc&_r=1";
+	const facebookUrl =
+		"https://www.facebook.com/profile.php?id=61565186673220&mibextid=wwXIfr&rdid=UJ6NQQAM9hT0QXnU&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F12Gr47Fn97X%2F%3Fmibextid%3DwwXIfr#";
+
 	return (
 		<div className="footer">
 			<div className="footer-inner">
 				<div className="footer-top">
 					<p className="footer__logo">Flovas</p>
 					<div className="footer__socials">
-						<a style={{ pointerEvents: "none" }} href={""}>
+						<a href={instagramUrl}>
 							<img width={30} src={instagramIcon} alt="" />
 						</a>
-						<a style={{ pointerEvents: "none" }} href={""}>
+						<a href={tiktokUrl}>
 							<img width={30} src={tiktokIcon} alt="" />
 						</a>
-						<a
-							href={"https://www.facebook.com/profile.php?id=61565186673220"}
-							target="_blank"
-						>
+						<a href={facebookUrl} target="_blank">
 							<img width={30} src={facebookIcon} alt="" />
 						</a>
 					</div>
@@ -32,7 +35,7 @@ const Footer = () => {
 						<p className="footer__nav-list-title">{t("footer.nav")}</p>
 						<a href="#home">{t("home_title")}</a>
 						<a href="#jobs">{t("jobs_title")}</a>
-						<a href="#about-us">{t("about_title")}</a>
+						<a href="#about-us">{t("about_title")} Flovas</a>
 						<a href="#contacts">{t("contacts_title")}</a>
 					</div>
 					<div className="footer__nav-list">
@@ -42,16 +45,13 @@ const Footer = () => {
 					</div>
 					<div className="footer__nav-list">
 						<p className="footer__nav-list-title">{t("footer.follow_us")}</p>
-						<a style={{ pointerEvents: "none" }} href="">
+						<a href={instagramUrl} target="_blank">
 							Instagram
 						</a>
-						<a style={{ pointerEvents: "none" }} href="">
+						<a href={tiktokUrl} target="_blank">
 							TikTok
 						</a>
-						<a
-							href="https://www.facebook.com/profile.php?id=61565186673220"
-							target="_blank"
-						>
+						<a href={facebookUrl} target="_blank">
 							Facebook
 						</a>
 					</div>

@@ -69,9 +69,9 @@ const Header = () => {
 			<header className={"header"}>
 				<div className="header-top">
 					<MenuBtn />
-					<NavLink to={"/"} className={"header__logo"}>
+					<a href={"#home"} className={"header__logo"}>
 						Flovas <span>{t("logo_title")}</span>
-					</NavLink>
+					</a>
 					<nav ref={navRef} className="header__nav">
 						<a className={"nav-link active"} href={"#home"}>
 							{t("home_title")}

@@ -37,7 +37,7 @@ const Menu = () => {
 				<div className="dot-link-container">
 					<div className="dot"></div>
 					<a className="menu__link" href="#about-us">
-						{t("about_title")}
+						{t("about_title")} Flovas
 					</a>
 				</div>
 				<div className="dot-link-container">
