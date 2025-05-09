@@ -68,20 +68,20 @@ const Header = () => {
 				<div className="header-top">
 					<MenuBtn />
 					<NavLink to={"/"} className={"header__logo"}>
-						Flovas <span>agentura</span>
+						Flovas <span>агенція</span>
 					</NavLink>
 					<nav ref={navRef} className="header__nav">
 						<a className={"nav-link active"} href={"#home"}>
-							Uvod
+							Головна
 						</a>
 						<a className={"nav-link"} href={"#jobs"}>
-							Kariera
+							Вакансії
 						</a>
 						<a className={"nav-link"} href={"#about-us"}>
-							O nas
+							Про нас
 						</a>
 						<a className={"nav-link"} href={"#contacts"}>
-							Kontakty
+							Контакти
 						</a>
 						<div
 							className={"nav-link-indicator"}

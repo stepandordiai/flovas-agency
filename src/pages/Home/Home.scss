@@ -55,7 +55,7 @@
 
 // 149.67px menu height
 .home-inner--active {
-	padding-top: 249.67px;
+	margin-top: calc(249.67px - 75px) !important;
 }
 
 .title-container {

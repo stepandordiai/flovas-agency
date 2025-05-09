@@ -1,19 +1,17 @@
+@use "./../../mixins" as *;
+
 .job-card {
 	display: flex;
 	flex-direction: column;
 	background: #eeeeee;
 	padding: 10px;
 	border-radius: 25px;
-	// cursor: pointer;
-
-	// &:hover {
-	// 	background: var(--accent-clr);
-	// }
 }
 
 .job-card__img {
 	border-radius: 25px;
 	margin-bottom: 10px;
+	aspect-ratio: 1/1;
 }
 
 .job-card__header {
@@ -45,17 +43,30 @@
 }
 
 .job-card__link {
-	display: grid;
-	place-content: center;
+	@include grid-center;
 	background: var(--accent-clr);
 	color: #000;
 	height: 50px;
 	border-radius: 25px;
 	padding: 0 12.5px;
-	width: 100%;
 	transition: scale 0.3s;
 
 	&:hover {
 		scale: 0.95;
+	}
+}
+
+.job-card__tel-link {
+	@include grid-center;
+	background: #000;
+	color: #fff;
+	height: 50px;
+	border-radius: 25px;
+	padding: 0 12.5px;
+	transition: scale 0.3s;
+
+	&:hover {
+		scale: 0.95;
+		color: #fff;
 	}
 }

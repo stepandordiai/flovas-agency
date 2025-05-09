@@ -1,34 +1,20 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import JobCard from "../../components/JobCard/JobCard";
-import "./Home.scss";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import ContactUs from "../../components/ContactUs/ContactUs";
+import Jobs from "../../components/Jobs/Jobs";
+import "./Home.scss";
 
 const Home = () => {
-	const placesData = ["Prague", "Kolin", "Brno", "Ostrava", "Pardubice"];
-
-	const [loading, setLoading] = useState(true);
-
-	const [data, setData] = useState([]);
-
-	const getJobs = async () => {
-		try {
-			const response = await axios(
-				"https://flovas-crud.onrender.com/api/products"
-			);
-			setData(response.data);
-			setTimeout(() => {
-				setLoading(false);
-			}, 2000);
-		} catch (error) {
-			console.log(error);
-			setLoading(false);
-		}
-	};
+	const placesData = [
+		"Prague",
+		"Kolin",
+		"Brno",
+		"Ostrava",
+		"Pardubice",
+		"Cheb",
+	];
 
 	useEffect(() => {
-		getJobs();
 		document.querySelectorAll(".blur-char").forEach((char, index) => {
 			setTimeout(() => {
 				char.classList.add("blur-char--active");
@@ -120,27 +106,15 @@ const Home = () => {
 							</span>
 						</div>
 						<div className="home__link-container">
-							<NavLink className={"home__link"} to={"jobs"}>
+							<a className={"home__link"} href="#jobs">
 								Kariera
-							</NavLink>
+							</a>
 							<button className={"home__link home__contact-us-link"}>
 								Kontaktujte nás
 							</button>
 						</div>
 					</div>
-					<div className="jobs">
-						{loading === true ? (
-							<div className="loading">
-								<div></div>
-							</div>
-						) : (
-							<div className={"jobs-container"} id="jobs">
-								{data.map((job, index) => {
-									return <JobCard key={index} job={job} />;
-								})}
-							</div>
-						)}
-					</div>
+					<Jobs />
 					<div className="about-us" id="about-us">
 						<p>About us</p>
 					</div>

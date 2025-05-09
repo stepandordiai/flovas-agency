@@ -2,14 +2,17 @@
 
 .footer {
 	position: fixed;
-	top: 75px;
+	top: 0;
 	right: 25px;
-	bottom: 0;
 	left: 25px;
+	height: 100vh;
+}
+
+.footer-inner {
+	height: 100%;
 	display: flex;
 	align-items: center;
 	gap: 20px;
-	padding: 25px;
 }
 
 .footer__logo {
@@ -54,8 +57,9 @@ a {
 .footer-bottom__slider {
 	position: absolute;
 	bottom: 25px;
-	right: 0;
-	left: 0;
+	// right: 0;
+	// left: 0;
+	width: 100%;
 	background: #000;
 	height: 50px;
 	border-radius: 25px;
@@ -108,12 +112,19 @@ a {
 
 @media screen and (width <= 896px) {
 	.footer {
-		padding: 0 10px;
-		flex-direction: column;
-		align-items: flex-start;
-		top: 50px;
+		// padding: 0 10px;
+
+		// top: 50px;
 		left: 10px;
 		right: 10px;
+	}
+
+	.footer-inner {
+		height: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+		padding: 60px 0 0;
 	}
 
 	.footer-top {
