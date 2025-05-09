@@ -1,0 +1,40 @@
+.about {
+	position: relative;
+	z-index: 1;
+	margin-top: 25px;
+	height: 1000px;
+	background: var(--bg-clr);
+	width: 100%;
+	scroll-margin-top: 75px;
+}
+
+.about::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transform: translateY(-100%);
+	width: 50px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	box-shadow: -25px 25px var(--bg-clr);
+}
+
+.about::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	transform: translateY(-100%);
+	width: 50px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	box-shadow: 25px 25px var(--bg-clr);
+}
+
+.about__title {
+	padding: 25px;
+	font-size: clamp(2rem, 4vw, 3rem);
+}

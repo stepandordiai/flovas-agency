@@ -1,7 +1,16 @@
 .jobs {
 	scroll-margin-top: 75px;
+	padding: 0 25px;
 }
 
 .jobs__title {
-	font-size: 3rem;
+	padding: 25px 0;
+	font-size: clamp(2rem, 4vw, 3rem);
+}
+
+@media screen and (width <= 896px) {
+	.jobs {
+		scroll-margin-top: 60px;
+		padding: 0 10px;
+	}
 }

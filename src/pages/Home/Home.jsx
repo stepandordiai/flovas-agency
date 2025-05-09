@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Jobs from "../../components/Jobs/Jobs";
 import "./Home.scss";
+import About from "../../components/About/About";
+import Contacts from "../../components/Contacts/Contacts";
 
 const Home = () => {
 	const placesData = [
@@ -115,12 +117,8 @@ const Home = () => {
 						</div>
 					</div>
 					<Jobs />
-					<div className="about-us" id="about-us">
-						<p>About us</p>
-					</div>
-					<div className="contacts" id="contacts">
-						<p>Contacts</p>
-					</div>
+					<About />
+					<Contacts />
 				</div>
 			</div>
 			<ContactUs />

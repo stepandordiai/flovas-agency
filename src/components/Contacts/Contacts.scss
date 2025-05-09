@@ -1,0 +1,39 @@
+.contacts {
+	position: relative;
+	z-index: 0;
+	height: 1000px;
+	// background: #fff;
+	width: 100%;
+	scroll-margin-top: 75px;
+}
+
+.contacts::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	// transform: translateY(-100%);
+	width: 50px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	box-shadow: -25px -25px var(--bg-clr);
+}
+
+.contacts::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	// transform: translateY(-100%);
+	width: 50px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	box-shadow: 25px -25px var(--bg-clr);
+}
+
+.contacts__title {
+	padding: 25px;
+	font-size: clamp(2rem, 4vw, 3rem);
+}

@@ -47,7 +47,8 @@
 	flex-direction: column;
 	background: #fff;
 	border-radius: 25px;
-	padding: 100px 12.5px 12.5px;
+	// padding: 100px 25px 25px;
+	overflow: hidden;
 	margin-top: 75px;
 	min-height: calc(100vh - 100px);
 	transition: all 0.5s;
@@ -64,6 +65,7 @@
 	align-items: center;
 	flex-direction: column;
 	row-gap: 50px;
+	padding: 100px 25px 0;
 }
 
 .blur-char {
@@ -198,18 +200,6 @@ form {
 .empty-div {
 	height: 100vh;
 	pointer-events: none;
-}
-
-.about-us {
-	height: 1000px;
-	background: var(--accent-clr);
-	width: 100%;
-}
-
-.contacts {
-	height: 1000px;
-	background: var(--secondary-clr);
-	width: 100%;
 }
 
 @media screen and (width <= 896px) {
