@@ -5,7 +5,7 @@ import data from "./../../data/jobs.json";
 import "./Jobs.scss";
 
 const Jobs = () => {
-	console.log(data);
+	// console.log(data);
 	// const [loading, setLoading] = useState(true);
 
 	// const [data, setData] = useState([]);

@@ -16,15 +16,15 @@
 
 .lng-select-banner {
 	padding: 25px;
-	background: #e0dddd;
+	background: var(--bg-clr);
 	border-radius: 25px;
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 1;
-	width: 300px;
-	aspect-ratio: 1/1;
+	width: 500px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity 0.3s;
@@ -39,10 +39,9 @@
 
 .lng-select__list {
 	display: flex;
-	align-items: flex-end;
-	flex-direction: column;
-	row-gap: 5px;
-	margin-top: 25px;
+	flex-wrap: wrap;
+	gap: 5px;
+	margin-top: 10px;
 }
 
 .lng-select__list--visible {
@@ -52,13 +51,11 @@
 
 .lng-select__option {
 	@include flex-center;
-	width: 100%;
-	height: 50px;
 	column-gap: 5px;
-	background: #eeeeee;
+	background: var(--bg-lighter-clr);
 	color: #000;
-	border-radius: 25px;
-	padding: 5px 5px 5px 7.5px;
+	border-radius: 17.5px;
+	padding: 5px 5px 5px 8.75px;
 	cursor: pointer;
 
 	&:hover {
@@ -78,7 +75,6 @@
 	left: 0;
 	-webkit-backdrop-filter: blur(0px);
 	backdrop-filter: blur(0px);
-	background: rgba(0, 0, 0, 0);
 	pointer-events: none;
 	transition: all 0.5s;
 }
@@ -89,11 +85,21 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	-webkit-backdrop-filter: blur(25px);
-	backdrop-filter: blur(25px);
-	background: rgba(0, 0, 0, 0.5);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
 	pointer-events: all;
 }
 
-@media screen {
+@media screen and (width <= 896px) {
+	.lng-select__btn {
+		span {
+			display: none;
+		}
+	}
+}
+
+@media screen and (width <= 540px) {
+	.lng-select-banner {
+		width: calc(100% - 40px);
+	}
 }

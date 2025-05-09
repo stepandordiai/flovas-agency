@@ -85,12 +85,12 @@ const LanguageSelect = () => {
 			<div className="lng-select">
 				<button className="lng-select__btn">
 					<span className="lng-select__btn-value">{lngSelectBtnTxt}</span>
-					<img width={20} src={lngSelectBtnIcon} alt="" />
+					<img width={25} height={25} src={lngSelectBtnIcon} alt="" />
 				</button>
 			</div>
 			<div className="lng-select-banner">
 				<div className="lng-select-list-container">
-					<p>Vyberte si jazyk, který preferujete</p>
+					<p>Оберіть бажану мову</p>
 					<ul className="lng-select__list">
 						<li
 							className={
@@ -99,7 +99,7 @@ const LanguageSelect = () => {
 							data-value="cs"
 						>
 							<span>Čeština</span>
-							<img width={20} src={csIcon} alt="" />
+							<img width={25} height={25} src={csIcon} alt="" />
 						</li>
 						<li
 							className={
@@ -108,7 +108,7 @@ const LanguageSelect = () => {
 							data-value="uk"
 						>
 							<span>Українська</span>
-							<img width={20} src={ukIcon} alt="" />
+							<img width={25} height={25} src={ukIcon} alt="" />
 						</li>
 						<li
 							className={
@@ -117,7 +117,7 @@ const LanguageSelect = () => {
 							data-value="en"
 						>
 							<span>English</span>
-							<img width={20} src={enIcon} alt="" />
+							<img width={25} height={25} src={enIcon} alt="" />
 						</li>
 					</ul>
 				</div>
