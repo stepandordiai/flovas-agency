@@ -8,9 +8,14 @@
 	"contacts_title": "Contacts",
 	"more_info_btn": "More info",
 	"contact_us_title": "Contact us",
+	"place1": "Prague",
+	"place2": "Kolin",
+	"place3": "Brno",
+	"place4": "Pardubice",
+	"place5": "Cheb",
 
 	"home": {
-		"title1": "Search for jobs in",
+		"title1": "Employment in the city",
 		"title2": "with Flovas agency",
 		"jobs_btn": "Vacancies"
 	},

@@ -15,12 +15,11 @@ const Home = () => {
 	}, [i18n.language]);
 
 	const placesData = [
-		"Prague",
-		"Kolin",
-		"Brno",
-		"Ostrava",
-		"Pardubice",
-		"Cheb",
+		t("place1"),
+		t("place2"),
+		t("place3"),
+		t("place4"),
+		t("place5"),
 	];
 
 	useEffect(() => {
