@@ -1,10 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { useEffect, useRef, useState } from "react";
-import "./Header.scss";
-import { NavLink } from "react-router-dom";
 import LngSelect from "../LngSelect/LngSelect";
 import MenuBtn from "../MenuBtn/MenuBtn";
 import Menu from "../Menu/Menu";
+import "./Header.scss";
 
 const Header = () => {
 	const { t } = useTranslation();
@@ -27,26 +26,25 @@ const Header = () => {
 		const homeRect = document.querySelector(".homie").getBoundingClientRect();
 		const jobsRect = document.querySelector(".jobs").getBoundingClientRect();
 		const aboutUsRect = document
-			.querySelector(".about-us")
+			.querySelector(".about")
 			.getBoundingClientRect();
 		const contactsRect = document
 			.querySelector(".contacts")
 			.getBoundingClientRect();
 		const navLinks = document.querySelectorAll(".nav-link");
 
-		for (let i = 0; i < navLinks.length; i++) {
-			navLinks[i].classList.remove("active");
-		}
-		if (homeRect.top <= 0 && homeRect.bottom >= 45) {
+		navLinks.forEach((link) => link.classList.remove("active"));
+
+		if (homeRect.top <= 80 && homeRect.bottom >= 85) {
 			navLinks[0].classList.add("active");
 		}
-		if (jobsRect.top <= 45 && jobsRect.bottom >= 45) {
+		if (jobsRect.top <= 80 && jobsRect.bottom >= 85) {
 			navLinks[1].classList.add("active");
 		}
-		if (aboutUsRect.top <= 45 && aboutUsRect.bottom >= 45) {
+		if (aboutUsRect.top <= 80 && aboutUsRect.bottom >= 85) {
 			navLinks[2].classList.add("active");
 		}
-		if (contactsRect.top <= 45 && contactsRect.bottom >= 45) {
+		if (contactsRect.top <= 80 && contactsRect.bottom >= 85) {
 			navLinks[3].classList.add("active");
 		}
 
@@ -54,15 +52,13 @@ const Header = () => {
 	}
 
 	useEffect(() => {
-		document.addEventListener("scroll", () => {
-			getRect();
-		});
+		document.addEventListener("scroll", getRect);
 		updateIndicator();
 
 		return () => {
 			removeEventListener("scroll", getRect);
 		};
-	}, []); // Re-run on path change
+	}, []);
 
 	return (
 		<>

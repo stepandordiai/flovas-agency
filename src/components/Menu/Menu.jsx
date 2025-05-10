@@ -8,14 +8,18 @@ const Menu = () => {
 	useEffect(() => {
 		document.querySelectorAll(".menu__link").forEach((link) => {
 			link.addEventListener("click", () => {
-				// document
-				// 	.querySelector(".home-inner")
-				// 	.classList.remove("home-inner--active");
 				document
 					.querySelector(".menu-btn__dot")
 					.classList.remove("menu-btn__dot--active");
 				document.querySelector(".menu").classList.remove("menu--active");
 			});
+		});
+
+		document.addEventListener("scroll", () => {
+			document
+				.querySelector(".menu-btn__dot")
+				.classList.remove("menu-btn__dot--active");
+			document.querySelector(".menu").classList.remove("menu--active");
 		});
 	}, []);
 
