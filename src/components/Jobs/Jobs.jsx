@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import React, { useState, useEffect } from "react";
 // import axios from "axios";
-import JobCard from "../../components/JobCard/JobCard";
+import Vacancy from "../../components/Vacancy/Vacancy";
 import data from "./../../data/jobs.json";
 import "./Jobs.scss";
 
@@ -41,8 +41,8 @@ const Jobs = () => {
 				</div>
 			) : ( */}
 			<div className={"jobs-container"}>
-				{data.map((job, index) => {
-					return <JobCard key={index} job={job} />;
+				{data.map((vacancy, index) => {
+					return <Vacancy key={index} vacancy={vacancy} />;
 				})}
 			</div>
 			{/* )} */}

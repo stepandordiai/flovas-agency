@@ -1,6 +1,6 @@
 @use "./../../mixins" as *;
 
-.job-card {
+.vacancy {
 	display: flex;
 	flex-direction: column;
 	background: var(--bg-lighter-clr);
@@ -8,29 +8,29 @@
 	border-radius: 25px;
 }
 
-.job-card__img {
+.vacancy__img {
 	border-radius: 20px;
 	margin-bottom: 10px;
 	aspect-ratio: 1/1;
 }
 
-.job-card__header {
+.vacancy__header {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 10px;
 }
 
-.job-card__date {
+.vacancy__date {
 	color: rgba(0, 0, 0, 0.5);
 }
 
-.job-card__title {
+.vacancy__title {
 	font-size: 1.5rem;
 	font-weight: 600;
 	margin-bottom: 10px;
 }
 
-.job-card__link-container {
+.vacancy__link-container {
 	margin-top: auto;
 	display: flex;
 	flex-direction: column;
@@ -42,7 +42,7 @@
 	}
 }
 
-.job-card__link {
+.vacancy__link {
 	@include grid-center;
 	background: var(--accent-clr);
 	color: #000;
@@ -56,7 +56,7 @@
 	}
 }
 
-.job-card__tel-link {
+.vacancy__tel-link {
 	@include grid-center;
 	background: #000;
 	color: #fff;

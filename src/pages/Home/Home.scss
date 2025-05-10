@@ -47,14 +47,12 @@
 	flex-direction: column;
 	background: #fff;
 	border-radius: 25px;
-	// padding: 100px 25px 25px;
 	overflow: hidden;
 	margin-top: 75px;
 	min-height: calc(100vh - 100px);
 	transition: all 0.5s;
 }
 
-// 149.67px menu height
 .home-inner--active {
 	margin-top: calc(249.67px - 75px) !important;
 }
@@ -89,11 +87,13 @@
 	@include flex-center;
 	height: 76.67px;
 	overflow: hidden;
+	background: var(--accent-clr);
+	border-radius: 25px;
 
 	span {
 		position: absolute;
 		transform: translateY(76.67px);
-		color: var(--secondary-clr);
+		color: #000;
 	}
 
 	span[data-show] {
