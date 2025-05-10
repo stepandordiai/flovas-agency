@@ -67,8 +67,8 @@ const Home = () => {
 					.querySelector(".contact-us")
 					.classList.add("contact-us--active");
 				document
-					.querySelector(".bg-curtain")
-					.classList.add("bg-curtain--active");
+					.querySelector(".contact-us__curtain")
+					.classList.add("contact-us__curtain--active");
 			});
 
 		return () => {

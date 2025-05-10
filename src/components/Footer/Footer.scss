@@ -19,10 +19,8 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	// justify-content: space-between;
 	align-items: flex-start;
 	gap: 10px;
-	// flex-wrap: wrap;
 }
 
 .footer__logo {
@@ -33,7 +31,6 @@
 .footer__socials {
 	display: flex;
 	gap: 10px;
-	// margin-top: 10px;
 }
 
 .footer__nav-container {
@@ -44,18 +41,19 @@
 	flex-wrap: wrap;
 }
 
+.footer__nav-title {
+	margin-bottom: 10px;
+	font-size: clamp(1rem, 4vw, 1.2rem);
+}
+
 .footer__nav-list {
 	display: flex;
 	flex-direction: column;
-	justify-self: center;
 	row-gap: 5px;
 }
 
-.footer__nav-list-title {
-	font-size: 1.2rem;
-}
-
 a {
+	align-self: flex-start;
 	color: rgba(0, 0, 0, 0.5);
 	transition: all 0.2s;
 

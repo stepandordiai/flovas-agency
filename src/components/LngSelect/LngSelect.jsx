@@ -21,10 +21,10 @@ const LanguageSelect = () => {
 		const selectOptions = selectList.querySelectorAll(".lng-select__option");
 
 		selectBtn.addEventListener("click", () => {
-			selectList.classList.toggle("lng-select__list--visible");
+			selectList.classList.add("lng-select__list--visible");
 			document
-				.querySelector(".lng-select-curtain")
-				.classList.toggle("lng-select-curtain--active");
+				.querySelector(".lng-select__curtain")
+				.classList.add("lng-select__curtain--active");
 		});
 
 		selectOptions.forEach((option) => {
@@ -44,18 +44,17 @@ const LanguageSelect = () => {
 				selectBtn.querySelector("img").src = option.querySelector("img").src;
 				selectList.classList.remove("lng-select__list--visible");
 				document
-					.querySelector(".lng-select-curtain")
-					.classList.remove("lng-select-curtain--active");
+					.querySelector(".lng-select__curtain")
+					.classList.remove("lng-select__curtain--active");
 			});
 		});
 
 		document.addEventListener("click", (e) => {
 			if (e.target !== selectBtn) {
-				// selectBtn.classList.remove("lng-select__btn--active");
 				selectList.classList.remove("lng-select__list--visible");
 				document
-					.querySelector(".lng-select-curtain")
-					.classList.remove("lng-select-curtain--active");
+					.querySelector(".lng-select__curtain")
+					.classList.remove("lng-select__curtain--active");
 			}
 		});
 	}, []);
@@ -125,7 +124,7 @@ const LanguageSelect = () => {
 					</ul>
 				</div>
 			</div>
-			<div className="lng-select-curtain"></div>
+			<div className="lng-select__curtain"></div>
 		</>
 	);
 };

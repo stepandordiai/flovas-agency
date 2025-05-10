@@ -21,13 +21,13 @@
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 1;
+	transform: translate(-50%, -50%) scale(0.9);
+	z-index: 101;
 	width: 500px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	opacity: 0;
 	pointer-events: none;
-	transition: opacity 0.3s;
+	transition: transform 0.5s, opacity 0.5s;
 }
 
 .lng-select-list-container {
@@ -45,8 +45,9 @@
 }
 
 .lng-select__list--visible {
-	opacity: 1 !important;
-	pointer-events: all !important;
+	transform: translate(-50%, -50%) scale(1);
+	opacity: 1;
+	pointer-events: all;
 }
 
 .lng-select__option {
@@ -67,27 +68,24 @@
 	background: var(--accent-clr);
 }
 
-.lng-select-curtain {
+// Curtain
+.lng-select__curtain {
 	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: 100;
+	pointer-events: none;
 	-webkit-backdrop-filter: blur(0px);
 	backdrop-filter: blur(0px);
-	pointer-events: none;
-	transition: all 0.5s;
+	transition: backdrop-filter 0.5s;
 }
 
-.lng-select-curtain--active {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+.lng-select__curtain--active {
+	pointer-events: all;
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
-	pointer-events: all;
 }
 
 @media screen and (width <= 896px) {

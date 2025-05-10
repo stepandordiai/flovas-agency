@@ -19,41 +19,47 @@ const Footer = () => {
 				<div className="footer-top">
 					<p className="footer__logo">Flovas</p>
 					<div className="footer__socials">
-						<a href={instagramUrl}>
+						<a href={instagramUrl} title="Instagram" target="_blank">
 							<img width={30} src={instagramIcon} alt="" />
 						</a>
-						<a href={tiktokUrl}>
+						<a href={tiktokUrl} title="TikTok" target="_blank">
 							<img width={30} src={tiktokIcon} alt="" />
 						</a>
-						<a href={facebookUrl} target="_blank">
+						<a href={facebookUrl} title="Facebook" target="_blank">
 							<img width={30} src={facebookIcon} alt="" />
 						</a>
 					</div>
 				</div>
 				<div className="footer__nav-container">
-					<div className="footer__nav-list">
-						<p className="footer__nav-list-title">{t("footer.nav")}</p>
-						<a href="#home">{t("home_title")}</a>
-						<a href="#jobs">{t("jobs_title")}</a>
-						<a href="#about-us">{t("about_title")} Flovas</a>
-						<a href="#contacts">{t("contacts_title")}</a>
+					<div className="footer__nav">
+						<p className="footer__nav-title">{t("footer.nav")}</p>
+						<div className="footer__nav-list">
+							<a href="#home">{t("home_title")}</a>
+							<a href="#jobs">{t("jobs_title")}</a>
+							<a href="#about-us">{t("about_title")} Flovas</a>
+							<a href="#contacts">{t("contacts_title")}</a>
+						</div>
 					</div>
-					<div className="footer__nav-list">
-						<p className="footer__nav-list-title">{t("contact_us_title")}</p>
-						<a href="tel:+420777957290">+420 777 957 290</a>
-						<a href="mailto:work1agency@seznam.cz">work1agency@seznam.cz</a>
+					<div className="footer__nav">
+						<p className="footer__nav-title">{t("contact_us_title")}</p>
+						<div className="footer__nav-list">
+							<a href="tel:+420777957290">+420 777 957 290</a>
+							<a href="mailto:work1agency@seznam.cz">work1agency@seznam.cz</a>
+						</div>
 					</div>
-					<div className="footer__nav-list">
-						<p className="footer__nav-list-title">{t("footer.follow_us")}</p>
-						<a href={instagramUrl} target="_blank">
-							Instagram
-						</a>
-						<a href={tiktokUrl} target="_blank">
-							TikTok
-						</a>
-						<a href={facebookUrl} target="_blank">
-							Facebook
-						</a>
+					<div className="footer__nav">
+						<p className="footer__nav-title">{t("footer.follow_us")}</p>
+						<div className="footer__nav-list">
+							<a href={instagramUrl} target="_blank">
+								Instagram
+							</a>
+							<a href={tiktokUrl} target="_blank">
+								TikTok
+							</a>
+							<a href={facebookUrl} target="_blank">
+								Facebook
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

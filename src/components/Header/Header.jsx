@@ -80,7 +80,7 @@ const Header = () => {
 							{t("jobs_title")}
 						</a>
 						<a className={"nav-link"} href={"#about-us"}>
-							{t("about_title")}
+							{t("about_title")} Flovas
 						</a>
 						<a className={"nav-link"} href={"#contacts"}>
 							{t("contacts_title")}
