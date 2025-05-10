@@ -1,8 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import { useEffect } from "react";
 import pinIcon from "/icons/pin.png";
-import jobImg from "/job-img/6.jpg";
 import "./JobCard.scss";
 
 const JobCard = ({ job }) => {
@@ -23,6 +21,7 @@ const JobCard = ({ job }) => {
 	return (
 		<>
 			<div className={"job-card"}>
+				{/* All images are compressed */}
 				<img className={"job-card__img"} src={job.img} alt="" loading="lazy" />
 				<div className={"job-card__header"}>
 					<p>
