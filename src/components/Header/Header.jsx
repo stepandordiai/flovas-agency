@@ -6,7 +6,7 @@ import Menu from "../Menu/Menu";
 import "./Header.scss";
 
 const Header = () => {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 
 	const indicatorRef = useRef(null);
 	const navRef = useRef(null);
@@ -58,7 +58,8 @@ const Header = () => {
 		return () => {
 			removeEventListener("scroll", getRect);
 		};
-	}, []);
+		// Update indicator on lng change
+	}, [i18n.language]);
 
 	return (
 		<>

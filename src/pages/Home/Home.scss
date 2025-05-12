@@ -62,7 +62,7 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	row-gap: 50px;
+	row-gap: 25px;
 	padding: 100px 25px 0;
 }
 
@@ -86,7 +86,7 @@
 .home__rotate-container {
 	position: relative;
 	@include flex-center;
-	height: 53.33px;
+	height: 63.33px;
 	max-width: 100%;
 	overflow: hidden;
 	background: var(--accent-clr);
@@ -94,8 +94,8 @@
 
 	span {
 		position: absolute;
-		transform: translateY(53.33px);
-		color: #000;
+		transform: translateY(63.33px);
+		padding: 5px 0;
 	}
 
 	span[data-show] {
@@ -104,7 +104,7 @@
 	}
 
 	span[data-up] {
-		transform: translateY(-53.33px);
+		transform: translateY(-63.33px);
 		transition: transform 0.5s;
 	}
 }
@@ -182,14 +182,18 @@
 	}
 
 	.home__rotate-container {
-		height: 35.33px;
+		height: 45.33px;
 
 		span {
-			transform: translateY(35.33px);
+			transform: translateY(45.33px);
 		}
 
 		span[data-up] {
-			transform: translateY(-35.33px);
+			transform: translateY(-45.33px);
 		}
+	}
+
+	.title-container {
+		padding: 100px 10px 0;
 	}
 }

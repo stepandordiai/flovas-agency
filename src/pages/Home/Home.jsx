@@ -2,9 +2,9 @@ import { useTranslation } from "react-i18next";
 import React, { useEffect, useState } from "react";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Jobs from "../../components/Jobs/Jobs";
-import "./Home.scss";
 import About from "../../components/About/About";
 import Contacts from "../../components/Contacts/Contacts";
+import "./Home.scss";
 
 const Home = () => {
 	const { t, i18n } = useTranslation();
