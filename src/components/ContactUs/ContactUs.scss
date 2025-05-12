@@ -47,10 +47,6 @@
 	flex-direction: column;
 	row-gap: 10px;
 
-	p {
-		font-size: clamp(1rem, 4vw, 1.2rem);
-	}
-
 	div {
 		display: flex;
 		flex-direction: column;
@@ -63,14 +59,15 @@
 	flex-direction: column;
 	row-gap: 10px;
 
-	p {
-		font-size: clamp(1rem, 4vw, 1.2rem);
-	}
-
 	div {
 		display: flex;
 		column-gap: 10px;
 	}
+}
+
+.contact-us__info-title,
+.contact-us__socials-title {
+	font-size: clamp(1rem, 4vw, 1.2rem);
 }
 
 // Curtain

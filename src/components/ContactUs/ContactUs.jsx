@@ -1,11 +1,13 @@
+import { useTranslation } from "react-i18next";
 import instagramIcon from "/icons/instagram.png";
 import tiktokIcon from "/icons/tiktok.png";
 import facebookIcon from "/icons/facebook.png";
 import "./ContactUs.scss";
 
 const ContactUs = () => {
-	function removeContactUs(e) {
-		e.preventDefault();
+	const { t } = useTranslation();
+
+	function removeContactUs() {
 		document
 			.querySelector(".contact-us")
 			.classList.remove("contact-us--active");
@@ -29,17 +31,20 @@ const ContactUs = () => {
 				</div>
 				<div className="contact-us__inner">
 					<div className="contact-us__info">
-						<p>Контактна інформація</p>
+						<p className="contact-us__info-title">Контактна інформація</p>
 						<div>
+							<p>{t("tel")}</p>
 							<a href="tel:+420777957290">+420 777 957 290</a>
+							<p>E-mail</p>
 							<a href="mailto:work1agency@seznam.cz">work1agency@seznam.cz</a>
+							<p>{t("address")}</p>
 							<a href="https://maps.app.goo.gl/g5t8zBqjSifGmSWR9">
 								Pod Hroby 271 Kolín IV
 							</a>
 						</div>
 					</div>
 					<div className="contact-us__socials">
-						<p>Слідкуйте за нами</p>
+						<p className="contact-us__socials-title">Слідкуйте за нами</p>
 						<div>
 							<a href={instagramUrl} title="Instagram" target="_blank">
 								<img width={30} src={instagramIcon} alt="" />
