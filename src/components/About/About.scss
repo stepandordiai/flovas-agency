@@ -2,7 +2,7 @@
 	position: relative;
 	z-index: 1;
 	margin-top: 25px;
-	height: 1000px;
+	min-height: 100vh;
 	background: var(--bg-clr);
 	width: 100%;
 	scroll-margin-top: 75px;
@@ -40,6 +40,20 @@
 	font-weight: 600;
 }
 
+.about__list {
+	padding: 25px;
+
+	li {
+		font-size: 1.5rem;
+		list-style: disc !important;
+		list-style-position: inside !important;
+	}
+
+	li::marker {
+		color: var(--accent-clr);
+	}
+}
+
 @media screen and (width <= 896px) {
 	.about {
 		scroll-margin-top: 50px;
@@ -47,5 +61,17 @@
 
 	.about__title {
 		padding: 10px;
+	}
+
+	.about__list {
+		padding: 10px;
+
+		li {
+			font-size: 1.5rem;
+		}
+
+		li::marker {
+			color: var(--accent-clr);
+		}
 	}
 }
