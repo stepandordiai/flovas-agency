@@ -1,44 +1,23 @@
 [
 	{
-		"title": "Упаковка шоколаду",
-		"date": "Vloženo před 38 minutami zpět",
+		"title": "Догляд за літніми людьми в будинку престарілих",
+		"date": "",
+		"place": "Прага, Колін, Пардубіце",
+		"details": "",
+		"img": "/vacancy-images/03.jpg"
+	},
+	{
+		"title": "Упаковка шоколаду на складах",
+		"date": "",
 		"place": "Прага",
-		"details": "Робота для чоловіків, жінок та сімейних пар.",
-		"img": "/job-img/02.jpg"
+		"details": "",
+		"img": "/vacancy-images/02.jpg"
 	},
 	{
 		"title": "Прибирання на складах DHL",
-		"date": "Vloženo před 28 minutami zpět",
+		"date": "",
 		"place": "Хеб",
-		"details": "120 kc/hod / 12год робочий графік",
-		"img": "/job-img/01.jpg"
-	},
-	{
-		"title": "Упаковка шоколаду",
-		"date": "Vloženo před 38 minutami zpět",
-		"place": "Прага",
-		"details": "Робота для чоловіків, жінок та сімейних пар.",
-		"img": "/job-img/02.jpg"
-	},
-	{
-		"title": "Прибирання на складах DHL",
-		"date": "Vloženo před 28 minutami zpět",
-		"place": "Хеб",
-		"details": "120 kc/hod / 12год робочий графік",
-		"img": "/job-img/01.jpg"
-	},
-	{
-		"title": "Упаковка шоколаду",
-		"date": "Vloženo před 38 minutami zpět",
-		"place": "Прага",
-		"details": "Робота для чоловіків, жінок та сімейних пар.",
-		"img": "/job-img/02.jpg"
-	},
-	{
-		"title": "Прибирання на складах DHL",
-		"date": "Vloženo před 28 minutami zpět",
-		"place": "Хеб",
-		"details": "120 kc/hod / 12год робочий графік",
-		"img": "/job-img/01.jpg"
+		"details": "",
+		"img": "/vacancy-images/01.jpg"
 	}
 ]
