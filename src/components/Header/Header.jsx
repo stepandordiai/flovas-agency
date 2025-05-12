@@ -3,17 +3,21 @@ import { useEffect, useRef, useState } from "react";
 import LngSelect from "../LngSelect/LngSelect";
 import MenuBtn from "../MenuBtn/MenuBtn";
 import Menu from "../Menu/Menu";
+import { useLocation } from "react-router-dom";
 import "./Header.scss";
 
 const Header = () => {
 	const { t, i18n } = useTranslation();
+
+	const { pathname } = useLocation();
 
 	const indicatorRef = useRef(null);
 	const navRef = useRef(null);
 	const [indicatorStyle, setIndicatorStyle] = useState({});
 
 	const updateIndicator = () => {
-		const activeLink = navRef.current.querySelector(".nav-link.active");
+		const activeLink = navRef.current?.querySelector(".nav-link.active");
+
 		if (activeLink && indicatorRef.current) {
 			setIndicatorStyle({
 				width: `${activeLink.offsetWidth}px`,
@@ -52,14 +56,24 @@ const Header = () => {
 	}
 
 	useEffect(() => {
+		// Update indicator on first render
+		setTimeout(() => {
+			getRect();
+			updateIndicator();
+		}, 100);
+
 		document.addEventListener("scroll", getRect);
-		updateIndicator();
 
 		return () => {
 			removeEventListener("scroll", getRect);
 		};
+	}, []);
+
+	useEffect(() => {
 		// Update indicator on lng change
-	}, [i18n.language]);
+		getRect();
+		updateIndicator();
+	}, [i18n.language, pathname]);
 
 	return (
 		<>
