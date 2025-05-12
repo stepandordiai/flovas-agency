@@ -37,19 +37,27 @@ const Header = () => {
 			.getBoundingClientRect();
 		const navLinks = document.querySelectorAll(".nav-link");
 
+		// Menu dots
+		const menuDots = document.querySelectorAll(".dot");
+
 		navLinks.forEach((link) => link.classList.remove("active"));
+		menuDots.forEach((link) => link.classList.remove("dot--active"));
 
 		if (homeRect.top <= 80 && homeRect.bottom >= 85) {
 			navLinks[0].classList.add("active");
+			menuDots[0].classList.add("dot--active");
 		}
 		if (jobsRect.top <= 80 && jobsRect.bottom >= 85) {
 			navLinks[1].classList.add("active");
+			menuDots[1].classList.add("dot--active");
 		}
 		if (aboutUsRect.top <= 80 && aboutUsRect.bottom >= 85) {
 			navLinks[2].classList.add("active");
+			menuDots[2].classList.add("dot--active");
 		}
 		if (contactsRect.top <= 80 && contactsRect.bottom >= 85) {
 			navLinks[3].classList.add("active");
+			menuDots[3].classList.add("dot--active");
 		}
 
 		updateIndicator();
