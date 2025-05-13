@@ -91,8 +91,11 @@ const LanguageSelect = () => {
 				</button>
 			</div>
 			<div className="lng-select-banner">
+				<div className="lng-select-banner__header">
+					<p className="lng-select-banner__title">{t("choose_lng_title")}</p>
+					<button>{t("close")}</button>
+				</div>
 				<div className="lng-select-list-container">
-					<p>{t("choose_lng_title")}</p>
 					<ul className="lng-select__list">
 						<li
 							className={

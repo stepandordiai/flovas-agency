@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Jobs from "../../components/Jobs/Jobs";
 import About from "../../components/About/About";
@@ -81,29 +81,31 @@ const Home = () => {
 				<div className={"home-inner"}>
 					<div className={"homie title-container"}>
 						<div className={"home__title"}>
-							{text.split("").map((char, index) => {
-								return (
-									<span key={index} className="blur-char">
-										{char}
-									</span>
-								);
-							})}
+							<p>
+								{text.split("").map((char, index) => {
+									return (
+										<span key={index} className="blur-char">
+											{char}
+										</span>
+									);
+								})}
+							</p>
 							<div className="home__rotate-container">
 								{placesData.map((place, index) => (
 									<span key={index}>{place}</span>
 								))}
 							</div>
-							<span>
+							<p>
 								{t("home.title2")
 									.split("")
 									.map((char, index) => {
 										return (
-											<React.Fragment key={index}>
-												<span className="blur-char">{char}</span>
-											</React.Fragment>
+											<span key={index} className="blur-char">
+												{char}
+											</span>
 										);
 									})}
-							</span>
+							</p>
 						</div>
 						<div className="home__link-container">
 							<a className={"home__link"} href="#jobs">

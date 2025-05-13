@@ -26,12 +26,12 @@ const ContactUs = () => {
 		<>
 			<div className={"contact-us"}>
 				<div className={"contact-us__header"}>
-					<p className={"contact-us__title"}>Зв'яжіться з нами</p>
-					<button onClick={removeContactUs}>закрити</button>
+					<p className={"contact-us__title"}>{t("contact_us_title")}</p>
+					<button onClick={removeContactUs}>{t("close")}</button>
 				</div>
 				<div className="contact-us__inner">
 					<div className="contact-us__info">
-						<p className="contact-us__info-title">Контактна інформація</p>
+						<p className="contact-us__info-title">{t("contact_us.info")}</p>
 						<div>
 							<p>{t("tel")}</p>
 							<a href="tel:+420777957290">+420 777 957 290</a>
@@ -44,7 +44,9 @@ const ContactUs = () => {
 						</div>
 					</div>
 					<div className="contact-us__socials">
-						<p className="contact-us__socials-title">Слідкуйте за нами</p>
+						<p className="contact-us__socials-title">
+							{t("contact_us.follow_us")}
+						</p>
 						<div>
 							<a href={instagramUrl} title="Instagram" target="_blank">
 								<img width={30} src={instagramIcon} alt="" />

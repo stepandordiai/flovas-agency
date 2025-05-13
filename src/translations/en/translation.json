@@ -15,6 +15,7 @@
 	"place5": "Cheb",
 	"tel": "Phone number",
 	"address": "Address",
+	"close": "close",
 
 	"home": {
 		"title1": "Employment in the city",
@@ -24,6 +25,11 @@
 
 	"footer": {
 		"nav": "Navigation",
+		"follow_us": "Follow us"
+	},
+
+	"contact_us": {
+		"info": "Contact us details",
 		"follow_us": "Follow us"
 	}
 }

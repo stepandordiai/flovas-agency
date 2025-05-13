@@ -1,31 +1,31 @@
 @use "./../../mixins" as *;
 
-.loading {
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	display: grid;
-	place-content: center;
-	background: conic-gradient(
-		var(--secondary-clr),
-		var(--accent-clr),
-		var(--secondary-clr)
-	);
-	animation: animateLoading 2s linear infinite;
+// .loading {
+// 	width: 100px;
+// 	height: 100px;
+// 	border-radius: 50%;
+// 	display: grid;
+// 	place-content: center;
+// 	background: conic-gradient(
+// 		var(--secondary-clr),
+// 		var(--accent-clr),
+// 		var(--secondary-clr)
+// 	);
+// 	animation: animateLoading 2s linear infinite;
 
-	div {
-		height: 80px;
-		aspect-ratio: 1/1;
-		background: #fff;
-		border-radius: 50%;
-	}
-}
+// 	div {
+// 		height: 80px;
+// 		aspect-ratio: 1/1;
+// 		background: #fff;
+// 		border-radius: 50%;
+// 	}
+// }
 
-@keyframes animateLoading {
-	to {
-		rotate: 360deg;
-	}
-}
+// @keyframes animateLoading {
+// 	to {
+// 		rotate: 360deg;
+// 	}
+// }
 
 .home {
 	position: relative;
@@ -33,13 +33,13 @@
 	border-radius: 25px;
 }
 
-@keyframes animateHome {
-	to {
-		top: 75px;
-		right: 25px;
-		left: 25px;
-	}
-}
+// @keyframes animateHome {
+// 	to {
+// 		top: 75px;
+// 		right: 25px;
+// 		left: 25px;
+// 	}
+// }
 
 .home-inner {
 	display: flex;
@@ -58,12 +58,11 @@
 }
 
 .title-container {
-	margin-bottom: 100px;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	row-gap: 25px;
-	padding: 100px 25px 0;
+	padding: 50px 25px 0;
 }
 
 .blur-char {
@@ -79,7 +78,7 @@
 
 .home__title {
 	text-align: center;
-	font-size: 3rem;
+	font-size: 2.5rem;
 	font-weight: 600;
 }
 
@@ -87,10 +86,8 @@
 	position: relative;
 	@include flex-center;
 	height: 63.33px;
-	max-width: 100%;
 	overflow: hidden;
 	background: var(--accent-clr);
-	border-radius: 25px;
 
 	span {
 		position: absolute;
@@ -112,9 +109,8 @@
 .home__link-container {
 	display: flex;
 	column-gap: 5px;
-	background: #000;
+	background: var(--bg-lighter-clr);
 	height: 60px;
-	border-radius: 30px;
 	padding: 5px;
 	filter: blur(10px);
 	opacity: 0;
@@ -131,9 +127,8 @@
 }
 
 .home__link {
-	background: white;
+	background: #fff;
 	color: #000;
-	border-radius: 25px;
 	padding: 0 12.5px;
 	height: 50px;
 	display: grid;
@@ -169,16 +164,20 @@
 		min-height: calc(100vh - 100px);
 	}
 
-	@keyframes animateHome {
-		to {
-			top: 50px;
-			right: 10px;
-			left: 10px;
-		}
+	// @keyframes animateHome {
+	// 	to {
+	// 		top: 50px;
+	// 		right: 10px;
+	// 		left: 10px;
+	// 	}
+	// }
+
+	.title-container {
+		padding: 50px 10px 0;
 	}
 
 	.home__title {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 
 	.home__rotate-container {
@@ -191,9 +190,5 @@
 		span[data-up] {
 			transform: translateY(-45.33px);
 		}
-	}
-
-	.title-container {
-		padding: 100px 10px 0;
 	}
 }

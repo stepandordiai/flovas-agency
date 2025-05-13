@@ -30,6 +30,18 @@
 	transition: transform 0.5s, opacity 0.5s;
 }
 
+.lng-select-banner__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.lng-select-banner__title {
+	font-size: clamp(1rem, 4vw, 1.5rem);
+	font-weight: 600;
+}
+
 .lng-select-list-container {
 	background: #fff;
 	border-radius: 20px;

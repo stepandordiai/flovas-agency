@@ -36,7 +36,7 @@
 
 .about__title {
 	padding: 25px;
-	font-size: clamp(2rem, 4vw, 3rem);
+	font-size: clamp(1.5rem, 4vw, 3rem);
 	font-weight: 600;
 }
 
@@ -44,7 +44,7 @@
 	padding: 25px;
 
 	li {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		list-style: disc !important;
 		list-style-position: inside !important;
 	}
@@ -65,13 +65,5 @@
 
 	.about__list {
 		padding: 10px;
-
-		li {
-			font-size: 1.5rem;
-		}
-
-		li::marker {
-			color: var(--accent-clr);
-		}
 	}
 }

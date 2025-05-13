@@ -2,8 +2,8 @@ import i18next from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
-import cs from "./translations/cs/translation.json";
 import uk from "./translations/uk/translation.json";
+import cs from "./translations/cs/translation.json";
 import en from "./translations/en/translation.json";
 
 i18next
@@ -11,18 +11,18 @@ i18next
 	.use(LanguageDetector)
 	.init({
 		resources: {
-			cs: {
-				translation: cs,
-			},
 			uk: {
 				translation: uk,
+			},
+			cs: {
+				translation: cs,
 			},
 			en: {
 				translation: en,
 			},
 		},
 
-		fallbackLng: "cs",
+		fallbackLng: "uk",
 
 		detection: {
 			order: ["localStorage", "cookie", "htmlTag", "path", "subdomain"],

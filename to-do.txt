@@ -1,1 +1,0 @@
-fix bugs with accent bg and home title 

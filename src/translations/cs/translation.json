@@ -15,6 +15,7 @@
 	"place5": "Cheb",
 	"tel": "Telefonní číslo",
 	"address": "Adresa",
+	"close": "zavřít",
 
 	"home": {
 		"title1": "Zaměstnanost ve městě",
@@ -23,6 +24,11 @@
 
 	"footer": {
 		"nav": "Navigace",
+		"follow_us": "Sledujte nás"
+	},
+
+	"contact_us": {
+		"info": "Kontaktní údaje",
 		"follow_us": "Sledujte nás"
 	}
 }
