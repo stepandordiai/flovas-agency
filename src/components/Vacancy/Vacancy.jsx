@@ -15,12 +15,16 @@ const Vacancy = ({ vacancy }) => {
 	return (
 		<div className={"vacancy"}>
 			{/* All images are compressed */}
-			<img className={"vacancy__img"} src={img} alt="" loading="lazy" />
-			<p className={"vacancy__date"}>
-				Опубліковано: {dateNow + "/" + (monthNow + 1) + "/" + yearNow}
-			</p>
-			<p>Місто: {place}</p>
-			<p className={"vacancy__title"}>{title}</p>
+			<img src={img} alt="" loading="lazy" />
+			<div className="vacancy__details">
+				<p className={"vacancy__date"}>
+					Опубліковано: {dateNow + "/" + (monthNow + 1) + "/" + yearNow}
+				</p>
+				<p>
+					<span style={{ fontWeight: 500 }}>Місто</span>: {place}
+				</p>
+				<p className={"vacancy__title"}>{title}</p>
+			</div>
 			<div className="vacancy__link-container">
 				<NavLink className={"vacancy__link"} to={"job-page"}>
 					{t("more_info_btn")}
