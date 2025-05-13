@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import ContactUs from "../../components/ContactUs/ContactUs";
-import Jobs from "../../components/Jobs/Jobs";
+import Vacancies from "../../components/Vacancies/Vacancies";
 import About from "../../components/About/About";
 import Contacts from "../../components/Contacts/Contacts";
 import "./Home.scss";
@@ -109,14 +109,14 @@ const Home = () => {
 						</div>
 						<div className="home__link-container">
 							<a className={"home__link"} href="#jobs">
-								{t("jobs_title")}
+								{t("vacancies_title")}
 							</a>
 							<button className={"home__link home__contact-us-link"}>
 								{t("contact_us_title")}
 							</button>
 						</div>
 					</div>
-					<Jobs />
+					<Vacancies />
 					<About />
 					<Contacts />
 				</div>

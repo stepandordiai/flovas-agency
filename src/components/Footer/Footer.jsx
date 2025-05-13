@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { HashLink } from "react-router-hash-link";
 import instagramIcon from "/icons/instagram.png";
 import tiktokIcon from "/icons/tiktok.png";
 import facebookIcon from "/icons/facebook.png";
@@ -34,10 +35,10 @@ const Footer = () => {
 					<div className="footer__nav">
 						<p className="footer__nav-title">{t("footer.nav")}</p>
 						<div className="footer__nav-list">
-							<a href="#home">{t("home_title")}</a>
-							<a href="#jobs">{t("jobs_title")}</a>
-							<a href="#about-us">{t("about_title")} Flovas</a>
-							<a href="#contacts">{t("contacts_title")}</a>
+							<HashLink to="/#home">{t("home_title")}</HashLink>
+							<HashLink to="/#vacancies">{t("vacancies_title")}</HashLink>
+							<HashLink to="/#about-us">{t("about_title")} Flovas</HashLink>
+							<HashLink to="/#contacts">{t("contacts_title")}</HashLink>
 						</div>
 					</div>
 					<div className="footer__nav">
@@ -81,7 +82,7 @@ const Footer = () => {
 						<p>
 							Site by{" "}
 							<a href="https://heeeyooo.studio/" target="_blank">
-								heeeyooo.studio
+								heeeyooo
 							</a>
 						</p>
 					</div>
@@ -95,7 +96,7 @@ const Footer = () => {
 						<p>
 							Site by{" "}
 							<a href="https://heeeyooo.studio/" target="_blank">
-								heeeyooo.studio
+								heeeyooo
 							</a>
 						</p>
 					</div>

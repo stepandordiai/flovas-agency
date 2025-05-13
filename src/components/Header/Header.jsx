@@ -4,6 +4,7 @@ import LngSelect from "../LngSelect/LngSelect";
 import MenuBtn from "../MenuBtn/MenuBtn";
 import Menu from "../Menu/Menu";
 import { useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./Header.scss";
 
 const Header = () => {
@@ -22,99 +23,98 @@ const Header = () => {
 			setIndicatorStyle({
 				width: `${activeLink.offsetWidth}px`,
 				left: `${activeLink.offsetLeft}px`,
+				transition: "all 0.3s",
 			});
 		}
 	};
 
-	function getRect() {
-		const homeRect = document.querySelector(".homie").getBoundingClientRect();
-		const jobsRect = document.querySelector(".jobs").getBoundingClientRect();
-		const aboutUsRect = document
-			.querySelector(".about")
-			.getBoundingClientRect();
-		const contactsRect = document
-			.querySelector(".contacts")
-			.getBoundingClientRect();
-		const navLinks = document.querySelectorAll(".nav-link");
-
-		// Menu dots
-		const menuDots = document.querySelectorAll(".dot");
-
+	function getRect(sections, navLinks, menuDots) {
 		navLinks.forEach((link) => link.classList.remove("active"));
 		menuDots.forEach((link) => link.classList.remove("dot--active"));
 
-		if (homeRect.top <= 80 && homeRect.bottom >= 85) {
-			navLinks[0].classList.add("active");
-			menuDots[0].classList.add("dot--active");
-		}
-		if (jobsRect.top <= 80 && jobsRect.bottom >= 85) {
-			navLinks[1].classList.add("active");
-			menuDots[1].classList.add("dot--active");
-		}
-		if (aboutUsRect.top <= 80 && aboutUsRect.bottom >= 85) {
-			navLinks[2].classList.add("active");
-			menuDots[2].classList.add("dot--active");
-		}
-		if (contactsRect.top <= 80 && contactsRect.bottom >= 85) {
-			navLinks[3].classList.add("active");
-			menuDots[3].classList.add("dot--active");
-		}
+		sections.forEach((section, index) => {
+			if (!section) return;
+
+			const sectionRect = section.getBoundingClientRect();
+
+			if (sectionRect.top <= 80 && sectionRect.bottom >= 85) {
+				navLinks[index].classList.add("active");
+				menuDots[index].classList.add("dot--active");
+			}
+		});
 
 		updateIndicator();
 	}
 
 	useEffect(() => {
-		// Update indicator on first render
+		const sections = [
+			document.querySelector(".homie"),
+			document.querySelector(".vacancies"),
+			document.querySelector(".about"),
+			document.querySelector(".contacts"),
+		];
+		const navLinks = document.querySelectorAll(".nav-link");
+		const menuDots = document.querySelectorAll(".dot");
+
+		const handleGetRectOnScroll = () => getRect(sections, navLinks, menuDots);
+
+		// Reset indicator and dots when navigating to another page
+		const resetActiveStates = () => {
+			navLinks.forEach((link) => link.classList.remove("active"));
+			menuDots.forEach((dot) => dot.classList.remove("dot--active"));
+
+			// Reset indicator style
+			setIndicatorStyle({
+				width: "0",
+				left: "0",
+			});
+		};
+
 		setTimeout(() => {
-			getRect();
-			updateIndicator();
+			handleGetRectOnScroll();
 		}, 100);
 
-		document.addEventListener("scroll", getRect);
+		resetActiveStates();
+
+		if (!menuDots || !navLinks.length || !sections.some(Boolean)) return;
+
+		document.addEventListener("scroll", handleGetRectOnScroll);
 
 		return () => {
-			removeEventListener("scroll", getRect);
+			document.removeEventListener("scroll", handleGetRectOnScroll);
 		};
-	}, []);
-
-	useEffect(() => {
-		// Update indicator on lng change
-		getRect();
-		updateIndicator();
-	}, [i18n.language, pathname]);
+	}, [pathname, i18n.language]);
 
 	return (
-		<>
-			<header className={"header"}>
-				<div className="header-top">
-					<MenuBtn />
-					<a href={"#home"} className={"header__logo"}>
-						Flovas <span>{t("logo_title")}</span>
-					</a>
-					<nav ref={navRef} className="header__nav">
-						<a className={"nav-link active"} href={"#home"}>
-							{t("home_title")}
-						</a>
-						<a className={"nav-link"} href={"#jobs"}>
-							{t("jobs_title")}
-						</a>
-						<a className={"nav-link"} href={"#about-us"}>
-							{t("about_title")} Flovas
-						</a>
-						<a className={"nav-link"} href={"#contacts"}>
-							{t("contacts_title")}
-						</a>
-						<div
-							className={"nav-link-indicator"}
-							ref={indicatorRef}
-							style={indicatorStyle}
-						></div>
-					</nav>
-					<LngSelect />
-				</div>
-				<Menu />
-			</header>
-		</>
+		<header className={"header"}>
+			<div className="header-top">
+				<MenuBtn />
+				<a href={"#home"} className={"header__logo"}>
+					Flovas <span>{t("logo_title")}</span>
+				</a>
+				<nav ref={navRef} className="header__nav">
+					<HashLink className={"nav-link"} to={"/#home"}>
+						{t("home_title")}
+					</HashLink>
+					<HashLink className={"nav-link"} to={"/#vacancies"}>
+						{t("vacancies_title")}
+					</HashLink>
+					<HashLink className={"nav-link"} to={"/#about-us"}>
+						{t("about_title")} Flovas
+					</HashLink>
+					<HashLink className={"nav-link"} to={"/#contacts"}>
+						{t("contacts_title")}
+					</HashLink>
+					<div
+						className={"nav-link-indicator"}
+						ref={indicatorRef}
+						style={indicatorStyle}
+					></div>
+				</nav>
+				<LngSelect />
+			</div>
+			<Menu />
+		</header>
 	);
 };
 
