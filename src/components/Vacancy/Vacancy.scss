@@ -7,6 +7,12 @@
 	row-gap: 10px;
 }
 
+.vacancy__no-img {
+	width: 100%;
+	aspect-ratio: 1/1;
+	background: var(--accent-clr);
+}
+
 .vacancy__details {
 	padding: 0 10px 0 10px;
 	display: flex;

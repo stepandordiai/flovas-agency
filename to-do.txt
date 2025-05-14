@@ -1,0 +1,6 @@
+update section titles with padding top like header px
+update logo with hashlink
+make font smaller for about us list
+update data with 2 new vacancies
+update vacancy with empty image
+update home rotate with new place
