@@ -97,12 +97,11 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	transform: translate(5px, -5px);
+	transform: translate(25%, -25%);
+	border-radius: 10px;
+	padding: 2.5px 7.5px;
 	background: var(--sec-accent-clr);
-	width: 20px;
-	aspect-ratio: 1/1;
 	@include grid-center;
-	border-radius: 50%;
 	font-size: 0.8rem;
 }
 

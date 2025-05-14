@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
+import data from "../../data/jobs.json";
 import "./Menu.scss";
 
 const Menu = () => {
@@ -37,11 +38,12 @@ const Menu = () => {
 					<div className="dot"></div>
 					<HashLink className="menu__link" to="/#vacancies">
 						{t("vacancies_title")}
+						<span className="menu__link-vacancies-qty">{data.length}</span>
 					</HashLink>
 				</div>
 				<div className="dot-link-container">
 					<div className="dot"></div>
-					<HashLink className="menu__link" to="/#about-us">
+					<HashLink className="menu__link" to="/#about">
 						{t("about_title")} Flovas
 					</HashLink>
 				</div>

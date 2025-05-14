@@ -1,4 +1,4 @@
-add same span to menu
+
 add same span to home btn
 update home btns
 
