@@ -1,0 +1,11 @@
+add same span to menu
+add same span to home btn
+update home btns
+
+update contacts
+add map
+add title
+add contact details
+add socials with title
+
+add screenshots folder with img

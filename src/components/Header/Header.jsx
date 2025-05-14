@@ -5,6 +5,7 @@ import MenuBtn from "../MenuBtn/MenuBtn";
 import Menu from "../Menu/Menu";
 import { useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import data from "../../data/jobs.json";
 import "./Header.scss";
 
 const Header = () => {
@@ -98,6 +99,7 @@ const Header = () => {
 					</HashLink>
 					<HashLink className={"nav-link"} to={"/#vacancies"}>
 						{t("vacancies_title")}
+						<span className="nav-link__vacancies-qty">{data.length}</span>
 					</HashLink>
 					<HashLink className={"nav-link"} to={"/#about-us"}>
 						{t("about_title")} Flovas
