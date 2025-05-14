@@ -101,7 +101,7 @@ const Header = () => {
 						{t("vacancies_title")}
 						<span className="nav-link__vacancies-qty">{data.length}</span>
 					</HashLink>
-					<HashLink className={"nav-link"} to={"/#about-us"}>
+					<HashLink className={"nav-link"} to={"/#about"}>
 						{t("about_title")} Flovas
 					</HashLink>
 					<HashLink className={"nav-link"} to={"/#contacts"}>

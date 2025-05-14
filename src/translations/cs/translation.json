@@ -17,6 +17,8 @@
 	"tel": "Telefonní číslo",
 	"address": "Adresa",
 	"close": "zavřít",
+	"contact_info": "Kontaktní údaje",
+	"map_title": "Naši kancelář najdete v Kolíně",
 
 	"home": {
 		"title1": "Zaměstnanost ve městě",
@@ -29,7 +31,10 @@
 	},
 
 	"contact_us": {
-		"info": "Kontaktní údaje",
 		"follow_us": "Sledujte nás"
+	},
+
+	"contacts": {
+		"socials": "Sociální sítě"
 	}
 }

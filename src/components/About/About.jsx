@@ -5,7 +5,7 @@ const About = () => {
 	const { t } = useTranslation();
 
 	return (
-		<div className="about" id="about-us">
+		<div className="about" id="about">
 			<p className="about__title">{t("about_title")} Flovas</p>
 			<ul className="about__list">
 				<li>Працевлаштування по всій Чехії</li>

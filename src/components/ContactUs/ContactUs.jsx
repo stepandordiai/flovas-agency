@@ -31,7 +31,7 @@ const ContactUs = () => {
 				</div>
 				<div className="contact-us__inner">
 					<div className="contact-us__info">
-						<p className="contact-us__info-title">{t("contact_us.info")}</p>
+						<p className="contact-us__info-title">{t("contact_info")}</p>
 						<div>
 							<p>{t("tel")}</p>
 							<a href="tel:+420777957290">+420 777 957 290</a>
@@ -58,6 +58,14 @@ const ContactUs = () => {
 								<img width={30} src={facebookIcon} alt="" />
 							</a>
 						</div>
+					</div>
+					<div>
+						<p className="contact-us__map-title">{t("map_title")}</p>
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2396.4306065654405!2d15.214412699999997!3d50.0242313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c153bf1fd2a9d%3A0xd6870708de146d86!2sPod%20Hroby%20271%2C%20280%2002%20Kol%C3%ADn%20IV!5e1!3m2!1sen!2scz!4v1747227621758!5m2!1sen!2scz"
+							width={"100%"}
+							loading="lazy"
+						></iframe>
 					</div>
 				</div>
 			</div>

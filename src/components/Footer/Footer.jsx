@@ -37,7 +37,7 @@ const Footer = () => {
 						<div className="footer__nav-list">
 							<HashLink to="/#home">{t("home_title")}</HashLink>
 							<HashLink to="/#vacancies">{t("vacancies_title")}</HashLink>
-							<HashLink to="/#about-us">{t("about_title")} Flovas</HashLink>
+							<HashLink to="/#about">{t("about_title")} Flovas</HashLink>
 							<HashLink to="/#contacts">{t("contacts_title")}</HashLink>
 						</div>
 					</div>

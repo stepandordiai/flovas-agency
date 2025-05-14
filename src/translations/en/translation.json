@@ -17,6 +17,8 @@
 	"tel": "Phone number",
 	"address": "Address",
 	"close": "close",
+	"contact_info": "Contact information",
+	"map_title": "You can find our office in Kolin",
 
 	"home": {
 		"title1": "Employment in the city",
@@ -30,7 +32,10 @@
 	},
 
 	"contact_us": {
-		"info": "Contact us details",
 		"follow_us": "Follow us"
+	},
+
+	"contacts": {
+		"socials": "Social networks"
 	}
 }

@@ -1,7 +1,0 @@
-update contacts
-add map
-add title
-add contact details
-add socials with title
-
-add screenshots folder with img

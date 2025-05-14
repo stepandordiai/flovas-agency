@@ -68,6 +68,13 @@
 .contact-us__info-title,
 .contact-us__socials-title {
 	font-size: clamp(1rem, 4vw, 1.2rem);
+	font-weight: 500;
+}
+
+.contact-us__map-title {
+	margin-bottom: 10px;
+	font-size: clamp(1rem, 4vw, 1.5rem);
+	font-weight: 500;
 }
 
 // Curtain
