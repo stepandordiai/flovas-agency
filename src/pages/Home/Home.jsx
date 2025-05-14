@@ -109,7 +109,7 @@ const Home = () => {
 							</p>
 						</div>
 						<div className="home__link-container">
-							<a className={"home__link"} href="#jobs">
+							<a className={"home__link"} href="#vacancies">
 								{t("vacancies_title")}
 							</a>
 							<button className={"home__link home__contact-us-link"}>

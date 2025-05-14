@@ -3,7 +3,7 @@
 	z-index: 0;
 	height: 1000px;
 	width: 100%;
-	scroll-margin-top: 75px;
+	padding: 0 25px;
 }
 
 .contacts::before {
@@ -31,17 +31,19 @@
 }
 
 .contacts__title {
-	padding: 25px;
+	padding-top: 100px;
+	padding-bottom: 25px;
 	font-size: clamp(1.5rem, 4vw, 3rem);
 	font-weight: 600;
 }
 
 @media screen and (width <= 896px) {
 	.contacts {
-		scroll-margin-top: 50px;
+		padding: 0 10px;
 	}
 
 	.contacts__title {
-		padding: 10px;
+		padding-top: 60px;
+		padding-bottom: 10px;
 	}
 }

@@ -1,3 +1,0 @@
-update section titles with padding top like header px
-update logo with hashlink
-make font smaller for about us list
