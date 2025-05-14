@@ -4,6 +4,7 @@ import ContactUs from "../../components/ContactUs/ContactUs";
 import Vacancies from "../../components/Vacancies/Vacancies";
 import About from "../../components/About/About";
 import Contacts from "../../components/Contacts/Contacts";
+import data from "../../data/jobs.json";
 import "./Home.scss";
 
 const Home = () => {
@@ -109,12 +110,13 @@ const Home = () => {
 							</p>
 						</div>
 						<div className="home__link-container">
-							<a className={"home__link"} href="#vacancies">
-								{t("vacancies_title")}
-							</a>
 							<button className={"home__link home__contact-us-link"}>
 								{t("contact_us_title")}
 							</button>
+							<a className={"home__link"} href="#vacancies">
+								{t("vacancies_title")}{" "}
+								<span className="home__link-vacancies-qty">{data.length}</span>
+							</a>
 						</div>
 					</div>
 					<Vacancies />

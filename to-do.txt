@@ -1,7 +1,3 @@
-
-add same span to home btn
-update home btns
-
 update contacts
 add map
 add title
