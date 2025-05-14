@@ -20,6 +20,7 @@ const Home = () => {
 		t("place3"),
 		t("place4"),
 		t("place5"),
+		t("place6"),
 	];
 
 	useEffect(() => {
