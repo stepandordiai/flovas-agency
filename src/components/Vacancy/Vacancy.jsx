@@ -5,24 +5,23 @@ import "./Vacancy.scss";
 const Vacancy = ({ vacancy }) => {
 	const { t } = useTranslation();
 
-	const { img, place, title } = vacancy;
-
-	const date = new Date();
-	const dateNow = date.getDate();
-	const monthNow = date.getMonth();
-	const yearNow = date.getFullYear();
+	const { img, place, title, updatedAt } = vacancy;
 
 	return (
 		<div className={"vacancy"}>
 			{/* All images r compressed */}
 			{img ? (
-				<img src={img} alt={title} loading="lazy" />
+				<img
+					src={`https://flovas-crud.onrender.com${img}`}
+					alt={title}
+					loading="lazy"
+				/>
 			) : (
 				<div className="vacancy__no-img"></div>
 			)}
 			<div className="vacancy__details">
 				<p className={"vacancy__date"}>
-					Опубліковано: {dateNow + "/" + (monthNow + 1) + "/" + yearNow}
+					Опубліковано: {updatedAt.slice(0, 10)}
 				</p>
 				<p>
 					<span style={{ fontWeight: 500 }}>Місто</span>: {place}

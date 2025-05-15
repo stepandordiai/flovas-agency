@@ -4,7 +4,7 @@ import { HashLink } from "react-router-hash-link";
 import data from "../../data/jobs.json";
 import "./Menu.scss";
 
-const Menu = () => {
+const Menu = ({ vacanciesData }) => {
 	const { t } = useTranslation();
 
 	useEffect(() => {
@@ -38,7 +38,9 @@ const Menu = () => {
 					<div className="dot"></div>
 					<HashLink className="menu__link" to="/#vacancies">
 						{t("vacancies_title")}
-						<span className="menu__link-vacancies-qty">{data.length}</span>
+						<span className="menu__link-vacancies-qty">
+							{vacanciesData.length}
+						</span>
 					</HashLink>
 				</div>
 				<div className="dot-link-container">

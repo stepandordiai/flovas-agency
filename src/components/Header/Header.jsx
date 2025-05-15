@@ -8,7 +8,7 @@ import { HashLink } from "react-router-hash-link";
 import data from "../../data/jobs.json";
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ vacanciesData }) => {
 	const { t, i18n } = useTranslation();
 
 	const { pathname } = useLocation();
@@ -99,7 +99,9 @@ const Header = () => {
 					</HashLink>
 					<HashLink className={"nav-link"} to={"/#vacancies"}>
 						{t("vacancies_title")}
-						<span className="nav-link__vacancies-qty">{data.length}</span>
+						<span className="nav-link__vacancies-qty">
+							{vacanciesData.length}
+						</span>
 					</HashLink>
 					<HashLink className={"nav-link"} to={"/#about"}>
 						{t("about_title")} Flovas
@@ -115,7 +117,7 @@ const Header = () => {
 				</nav>
 				<LngSelect />
 			</div>
-			<Menu />
+			<Menu vacanciesData={vacanciesData} />
 		</header>
 	);
 };

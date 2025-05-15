@@ -7,7 +7,7 @@ import Contacts from "../../components/Contacts/Contacts";
 import data from "../../data/jobs.json";
 import "./Home.scss";
 
-const Home = () => {
+const Home = ({ vacanciesData }) => {
 	const { t, i18n } = useTranslation();
 	const [text, setText] = useState(t("home.title1"));
 
@@ -115,11 +115,13 @@ const Home = () => {
 							</button>
 							<a className={"home__link"} href="#vacancies">
 								{t("vacancies_title")}{" "}
-								<span className="home__link-vacancies-qty">{data.length}</span>
+								<span className="home__link-vacancies-qty">
+									{vacanciesData.length}
+								</span>
 							</a>
 						</div>
 					</div>
-					<Vacancies />
+					<Vacancies vacanciesData={vacanciesData} />
 					<About />
 					<Contacts />
 				</div>
