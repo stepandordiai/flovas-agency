@@ -5,7 +5,6 @@ import MenuBtn from "../MenuBtn/MenuBtn";
 import Menu from "../Menu/Menu";
 import { useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import data from "../../data/jobs.json";
 import "./Header.scss";
 
 const Header = ({ vacanciesData }) => {

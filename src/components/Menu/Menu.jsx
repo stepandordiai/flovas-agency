@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
-import data from "../../data/jobs.json";
 import "./Menu.scss";
 
 const Menu = ({ vacanciesData }) => {

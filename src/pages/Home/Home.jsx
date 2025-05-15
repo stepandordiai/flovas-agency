@@ -4,7 +4,6 @@ import ContactUs from "../../components/ContactUs/ContactUs";
 import Vacancies from "../../components/Vacancies/Vacancies";
 import About from "../../components/About/About";
 import Contacts from "../../components/Contacts/Contacts";
-import data from "../../data/jobs.json";
 import "./Home.scss";
 
 const Home = ({ vacanciesData }) => {
