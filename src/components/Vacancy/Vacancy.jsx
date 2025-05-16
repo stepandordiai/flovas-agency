@@ -9,13 +9,8 @@ const Vacancy = ({ vacancy }) => {
 
 	return (
 		<div className={"vacancy"}>
-			{/* All images r compressed */}
 			{img ? (
-				<img
-					src={`https://flovas-crud.onrender.com${img}`}
-					alt={title}
-					loading="lazy"
-				/>
+				<img src={img} alt={title} loading="lazy" />
 			) : (
 				<div className="vacancy__no-img"></div>
 			)}
