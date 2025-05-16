@@ -4,9 +4,9 @@ import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
 import VacancyPage from "./pages/VacancyPage/VacancyPage";
 import "./i18next";
-import "./App.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import "./App.scss";
 
 function App() {
 	const [vacanciesData, setVacanciesData] = useState([]);
@@ -20,10 +20,11 @@ function App() {
 			);
 
 			setVacanciesData(response.data);
-			setIsLoading(false);
+			setTimeout(() => {
+				setIsLoading(false);
+			}, 10000);
 		} catch (error) {
 			console.log(error);
-		} finally {
 			setIsLoading(false);
 		}
 	};
@@ -36,7 +37,10 @@ function App() {
 		<Router>
 			<Header vacanciesData={vacanciesData} />
 			<Routes>
-				<Route path="/" element={<Home vacanciesData={vacanciesData} />} />
+				<Route
+					path="/"
+					element={<Home vacanciesData={vacanciesData} isLoading={isLoading} />}
+				/>
 				<Route
 					path="/vacancy-page"
 					element={<VacancyPage vacanciesData={vacanciesData} />}

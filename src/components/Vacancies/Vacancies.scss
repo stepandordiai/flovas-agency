@@ -1,5 +1,6 @@
 .vacancies {
 	padding: 0 25px 25px;
+	width: 100%;
 }
 
 .vacancies__title {
@@ -7,6 +8,38 @@
 	padding-bottom: 25px;
 	font-size: clamp(1.5rem, 4vw, 3rem);
 	font-weight: 600;
+}
+
+// Loading
+.vacancies-loading {
+	text-align: center;
+}
+
+.vacancies-loading__circle {
+	position: relative;
+	width: 50px;
+	aspect-ratio: 1/1;
+	background: conic-gradient(#000 25%, #fff 0%);
+	border-radius: 50%;
+	margin: auto;
+	animation: animateVacanciesLoadingCircle 1s infinite linear;
+
+	span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: calc(100% - 5px);
+		aspect-ratio: 1/1;
+		background: #fff;
+		border-radius: inherit;
+	}
+}
+
+@keyframes animateVacanciesLoadingCircle {
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 .vacancies-container {

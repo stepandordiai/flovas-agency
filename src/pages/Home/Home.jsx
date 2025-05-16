@@ -6,7 +6,7 @@ import About from "../../components/About/About";
 import Contacts from "../../components/Contacts/Contacts";
 import "./Home.scss";
 
-const Home = ({ vacanciesData }) => {
+const Home = ({ vacanciesData, isLoading }) => {
 	const { t, i18n } = useTranslation();
 	const [text, setText] = useState(t("home.title1"));
 
@@ -121,7 +121,7 @@ const Home = ({ vacanciesData }) => {
 							</a>
 						</div>
 					</div>
-					<Vacancies vacanciesData={vacanciesData} />
+					<Vacancies vacanciesData={vacanciesData} isLoading={isLoading} />
 					<About />
 					<Contacts />
 				</div>
