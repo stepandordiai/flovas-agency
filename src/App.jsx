@@ -22,7 +22,7 @@ function App() {
 			setVacanciesData(response.data);
 			setTimeout(() => {
 				setIsLoading(false);
-			}, 10000);
+			}, 3000);
 		} catch (error) {
 			console.log(error);
 			setIsLoading(false);

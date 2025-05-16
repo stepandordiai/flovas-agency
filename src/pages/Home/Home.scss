@@ -42,10 +42,6 @@
 // }
 
 .home-inner {
-	//
-	position: sticky;
-	top: 75px;
-	//
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -55,10 +51,6 @@
 	margin-top: 75px;
 	min-height: calc(100vh - 100px);
 	transition: all 0.5s;
-}
-
-.home-inner--active {
-	margin-top: calc(249.67px - 75px) !important;
 }
 
 .title-container {
@@ -166,9 +158,6 @@
 	}
 
 	.home-inner {
-		//
-		top: 50px;
-		//
 		margin-top: 50px;
 		min-height: calc(100vh - 100px);
 	}
