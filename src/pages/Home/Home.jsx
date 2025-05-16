@@ -15,12 +15,13 @@ const Home = ({ vacanciesData }) => {
 	}, [i18n.language]);
 
 	const placesData = [
-		t("place1"),
-		t("place2"),
-		t("place3"),
-		t("place4"),
-		t("place5"),
-		t("place6"),
+		t("home.place1"),
+		t("home.place2"),
+		t("home.place3"),
+		t("home.place4"),
+		t("home.place5"),
+		t("home.place6"),
+		t("home.place7"),
 	];
 
 	useEffect(() => {

@@ -18,13 +18,14 @@
 .footer-top {
 	width: 100%;
 	display: flex;
-	flex-direction: column;
 	align-items: flex-start;
+	flex-direction: column;
 	gap: 10px;
 }
 
 .footer__logo {
 	font-size: clamp(5rem, 10vw, 10rem);
+	font-weight: 500;
 	color: rgba(0, 0, 0, 0.5);
 }
 
@@ -43,7 +44,6 @@
 
 .footer__nav-title {
 	margin-bottom: 10px;
-	font-size: clamp(1rem, 4vw, 1.2rem);
 }
 
 .footer__nav-list {
@@ -126,7 +126,7 @@ a {
 		height: 100%;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 20px;
+		gap: 10px;
 		padding: 60px 0 0;
 	}
 

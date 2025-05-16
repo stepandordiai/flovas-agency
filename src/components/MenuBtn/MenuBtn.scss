@@ -10,10 +10,11 @@
 	width: 7.5px;
 	aspect-ratio: 1/1;
 	border-radius: 50%;
+	transition: background-color 0.3s;
 }
 
 .menu-btn__dot--active {
-	background: var(--accent-clr);
+	background: #fff;
 }
 
 @media screen and (width <= 896px) {
