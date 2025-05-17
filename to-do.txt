@@ -1,1 +1,3 @@
 Add Loading component with animated blur txt Flovas t(agency)
+Add AddToHomeScreen component similar to htmllessons.io
+update favicons
