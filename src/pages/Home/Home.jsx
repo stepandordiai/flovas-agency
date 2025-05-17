@@ -81,47 +81,49 @@ const Home = ({ vacanciesData, isLoading }) => {
 		<>
 			<div className={"home"} id="home">
 				<div className={"home-inner"}>
-					<div className={"homie title-container"}>
-						<div className={"home__title"}>
-							<p>
-								{text.split("").map((char, index) => {
-									return (
-										<span key={index} className="blur-char">
-											{char}
-										</span>
-									);
-								})}
-							</p>
-							<div className="home__rotate-container">
-								{placesData.map((place, index) => (
-									<span key={index}>{place}</span>
-								))}
-							</div>
-							<p>
-								{t("home.title2")
-									.split("")
-									.map((char, index) => {
+					<div className="home-inner-container">
+						<div className={"homie title-container"}>
+							<div className={"home__title"}>
+								<p>
+									{text.split("").map((char, index) => {
 										return (
 											<span key={index} className="blur-char">
 												{char}
 											</span>
 										);
 									})}
-							</p>
+								</p>
+								<div className="home__rotate-container">
+									{placesData.map((place, index) => (
+										<span key={index}>{place}</span>
+									))}
+								</div>
+								<p>
+									{t("home.title2")
+										.split("")
+										.map((char, index) => {
+											return (
+												<span key={index} className="blur-char">
+													{char}
+												</span>
+											);
+										})}
+								</p>
+							</div>
+							<div className="home__link-container">
+								<button className={"home__link home__contact-us-link"}>
+									{t("contact_us_title")}
+								</button>
+								<a className={"home__link"} href="#vacancies">
+									{t("vacancies_title")}{" "}
+									<span className="home__link-vacancies-qty">
+										{vacanciesData.length}
+									</span>
+								</a>
+							</div>
 						</div>
-						<div className="home__link-container">
-							<button className={"home__link home__contact-us-link"}>
-								{t("contact_us_title")}
-							</button>
-							<a className={"home__link"} href="#vacancies">
-								{t("vacancies_title")}{" "}
-								<span className="home__link-vacancies-qty">
-									{vacanciesData.length}
-								</span>
-							</a>
-						</div>
+						<Vacancies vacanciesData={vacanciesData} isLoading={isLoading} />
 					</div>
-					<Vacancies vacanciesData={vacanciesData} isLoading={isLoading} />
 					<About />
 					<Contacts />
 				</div>

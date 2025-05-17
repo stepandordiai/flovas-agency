@@ -58,6 +58,22 @@ const Header = ({ vacanciesData }) => {
 
 		const handleGetRectOnScroll = () => getRect(sections, navLinks, menuDots);
 
+		setTimeout(() => {
+			handleGetRectOnScroll();
+		}, 100);
+
+		if (!menuDots || !navLinks.length || !sections.some(Boolean)) return;
+
+		document.addEventListener("scroll", handleGetRectOnScroll);
+
+		return () => {
+			document.removeEventListener("scroll", handleGetRectOnScroll);
+		};
+	}, [pathname, i18n.language]);
+
+	useEffect(() => {
+		const navLinks = document.querySelectorAll(".nav-link");
+		const menuDots = document.querySelectorAll(".dot");
 		// Reset indicator and dots when navigating to another page
 		const resetActiveStates = () => {
 			navLinks.forEach((link) => link.classList.remove("active"));
@@ -70,20 +86,8 @@ const Header = ({ vacanciesData }) => {
 			});
 		};
 
-		setTimeout(() => {
-			handleGetRectOnScroll();
-		}, 100);
-
 		resetActiveStates();
-
-		if (!menuDots || !navLinks.length || !sections.some(Boolean)) return;
-
-		document.addEventListener("scroll", handleGetRectOnScroll);
-
-		return () => {
-			document.removeEventListener("scroll", handleGetRectOnScroll);
-		};
-	}, [pathname, i18n.language]);
+	}, [pathname]);
 
 	return (
 		<header className={"header"}>
@@ -93,7 +97,7 @@ const Header = ({ vacanciesData }) => {
 					Flovas <span>{t("logo_title")}</span>
 				</HashLink>
 				<nav ref={navRef} className="header__nav">
-					<HashLink className={"nav-link"} to={"/#home"}>
+					<HashLink className={"nav-link active"} to={"/#home"}>
 						{t("home_title")}
 					</HashLink>
 					<HashLink className={"nav-link"} to={"/#vacancies"}>

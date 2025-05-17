@@ -11,7 +11,17 @@
 	min-height: 75px;
 	padding: 0 25px;
 	background: var(--bg-clr);
+	// opacity: 0;
+	// filter: blur(10px);
+	// animation: animateHeader 0.5s forwards;
 }
+
+// @keyframes animateHeader {
+// 	to {
+// 		opacity: 1;
+// 		filter: blur(0);
+// 	}
+// }
 
 .header::before {
 	content: "";

@@ -53,6 +53,11 @@
 	transition: all 0.5s;
 }
 
+.home-inner-container {
+	min-height: calc(100vh - 75px);
+	width: 100%;
+}
+
 .title-container {
 	display: flex;
 	align-items: center;
@@ -160,6 +165,11 @@
 	.home-inner {
 		margin-top: 50px;
 		min-height: calc(100vh - 100px);
+	}
+
+	.home-inner-container {
+		min-height: calc(100vh - 50px);
+		width: 100%;
 	}
 
 	// @keyframes animateHome {
