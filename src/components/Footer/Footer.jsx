@@ -82,7 +82,7 @@ const Footer = () => {
 						<p>
 							Site by{" "}
 							<a href="https://heeeyooo.studio/" target="_blank">
-								heeeyooo
+								heeeyooo studio
 							</a>
 						</p>
 					</div>
@@ -96,7 +96,7 @@ const Footer = () => {
 						<p>
 							Site by{" "}
 							<a href="https://heeeyooo.studio/" target="_blank">
-								heeeyooo
+								heeeyooo studio
 							</a>
 						</p>
 					</div>

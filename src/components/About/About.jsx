@@ -6,7 +6,7 @@ const About = () => {
 
 	return (
 		<div className="about" id="about">
-			<p className="about__title">{t("about_title")} Flovas</p>
+			<h2 className="about__title">{t("about_title")} Flovas</h2>
 			<ul className="about__list">
 				<li>Працевлаштування по всій Чехії</li>
 				<li>Для чоловіків жінок та сімейних пар</li>

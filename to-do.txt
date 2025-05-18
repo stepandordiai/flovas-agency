@@ -1,1 +1,0 @@
-Add AddToHomeScreen component similar to htmllessons.io

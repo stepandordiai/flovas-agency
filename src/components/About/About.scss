@@ -1,10 +1,7 @@
 .about {
-	position: relative;
-	z-index: 1;
-	min-height: 100vh;
 	background: var(--bg-lighter-clr);
 	width: 100%;
-	padding: 0 25px;
+	padding: 0 25px 25px;
 }
 
 .about__title {
@@ -20,19 +17,15 @@
 	row-gap: 5px;
 
 	li {
-		font-size: clamp(1rem, 4vw, 1.25rem);
+		font-size: clamp(1rem, 2vw, 1.25rem);
 		list-style: disc !important;
 		list-style-position: inside !important;
-	}
-
-	li::marker {
-		color: #fff;
 	}
 }
 
 @media screen and (width <= 896px) {
 	.about {
-		padding: 0 10px;
+		padding: 0 10px 10px;
 	}
 
 	.about__title {

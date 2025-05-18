@@ -96,9 +96,10 @@ a {
 
 	a {
 		color: #fff;
+		transition: color 0.1s;
 
 		&:hover {
-			color: var(--accent-clr);
+			color: var(--sec-accent-clr);
 		}
 	}
 }

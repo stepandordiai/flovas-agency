@@ -37,7 +37,7 @@ const Vacancies = ({ vacanciesData, isLoading }) => {
 					<div className="vacancies-loading__circle">
 						<span></span>
 					</div>
-					<span>Вакансії завантажуються</span>
+					<span>{t("vacancies_r_loading")}</span>
 				</div>
 			) : (
 				<div className={"vacancies-container"}>

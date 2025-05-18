@@ -5,6 +5,7 @@ import Vacancies from "../../components/Vacancies/Vacancies";
 import About from "../../components/About/About";
 import Contacts from "../../components/Contacts/Contacts";
 import "./Home.scss";
+import AddToHomeScreen from "../../components/AddToHomeScreen/AddToHomeScreen";
 
 const Home = ({ vacanciesData, isLoading }) => {
 	const { t, i18n } = useTranslation();
@@ -83,7 +84,7 @@ const Home = ({ vacanciesData, isLoading }) => {
 				<div className={"home-inner"}>
 					<div className="home-inner-container">
 						<div className={"homie title-container"}>
-							<div className={"home__title"}>
+							<h1 className={"home__title"}>
 								<p>
 									{text.split("").map((char, index) => {
 										return (
@@ -109,7 +110,7 @@ const Home = ({ vacanciesData, isLoading }) => {
 											);
 										})}
 								</p>
-							</div>
+							</h1>
 							<div className="home__link-container">
 								<button className={"home__link home__contact-us-link"}>
 									{t("contact_us_title")}
@@ -126,6 +127,7 @@ const Home = ({ vacanciesData, isLoading }) => {
 					</div>
 					<About />
 					<Contacts />
+					<AddToHomeScreen />
 				</div>
 			</div>
 			<ContactUs />

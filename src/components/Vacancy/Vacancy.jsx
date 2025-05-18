@@ -24,7 +24,11 @@ const Vacancy = ({ vacancy }) => {
 				<p className={"vacancy__title"}>{title}</p>
 			</div>
 			<div className="vacancy__link-container">
-				<NavLink className={"vacancy__link"} to={"/vacancy-page"}>
+				<NavLink
+					className={"vacancy__link"}
+					to={"/vacancy-page"}
+					style={{ pointerEvents: "none" }}
+				>
 					{t("more_info_btn")}
 				</NavLink>
 				<a className={"vacancy__link"} href="tel:+420777957290">
