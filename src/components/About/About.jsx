@@ -7,14 +7,22 @@ const About = () => {
 	return (
 		<div className="about" id="about">
 			<h2 className="about__title">{t("about_title")} Flovas</h2>
+			<h3 className="about__list-title">{t("about.our_advantages_title")}</h3>
 			<ul className="about__list">
-				<li>Працевлаштування по всій Чехії</li>
-				<li>Для чоловіків жінок та сімейних пар</li>
-				<li>Аванси кожного тижня</li>
-				<li>Надаємо житло</li>
-				<li>Офіційне працевлаштування</li>
-				<li>Візова підтримка</li>
-				<li>Оплата соціалки та страховки</li>
+				<li>{t("about.our_advantages1")}</li>
+				<li>{t("about.our_advantages2")}</li>
+				<li>{t("about.our_advantages3")}</li>
+				<li>{t("about.our_advantages4")}</li>
+				<li>{t("about.our_advantages5")}</li>
+				<li>{t("about.our_advantages6")}</li>
+				<li>{t("about.our_advantages7")}</li>
+				<li>{t("about.our_advantages8")}</li>
+				<li>{t("about.our_advantages9")}</li>
+				<li>{t("about.our_advantages10")}</li>
+				<li>{t("about.our_advantages11")}</li>
+				<li>{t("about.our_advantages12")}</li>
+				<li>{t("about.our_advantages13")}</li>
+				<li>{t("about.our_advantages14")}</li>
 			</ul>
 		</div>
 	);

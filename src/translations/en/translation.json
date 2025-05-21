@@ -38,5 +38,23 @@
 
 	"contacts": {
 		"socials": "Social networks"
+	},
+
+	"about": {
+		"our_advantages_title": "Our advantages",
+		"our_advantages1": "Employment throughout the Czech Republic",
+		"our_advantages2": "For men, women and couples",
+		"our_advantages3": "Regular payment of salary advances",
+		"our_advantages4": "We provide housing",
+		"our_advantages5": "Official employment",
+		"our_advantages6": "Support in obtaining a visa and other documents",
+		"our_advantages7": "We pay social insurance",
+		"our_advantages8": "We pay for health insurance",
+		"our_advantages9": "Free vacancies",
+		"our_advantages10": "Ability to work overtime",
+		"our_advantages11": "We organize transportation from home to work",
+		"our_advantages12": "We are there for you in case of problems",
+		"our_advantages13": "We will help you overcome the language barrier",
+		"our_advantages14": "We will help you with your move"
 	}
 }

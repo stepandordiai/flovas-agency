@@ -38,5 +38,23 @@
 
 	"contacts": {
 		"socials": "Sociální sítě"
+	},
+
+	"about": {
+		"our_advantages_title": "Naše výhody",
+		"our_advantages1": "Zaměstnání v celé České republice",
+		"our_advantages2": "Pro muže, ženy a páry",
+		"our_advantages3": "Pravidelné vyplácení záloh na mzdu",
+		"our_advantages4": "Poskytujeme ubytování",
+		"our_advantages5": "Oficiální zaměstnání",
+		"our_advantages6": "Pomoc při získávání víza a dalších dokumentů",
+		"our_advantages7": "Platíme sociální pojištění",
+		"our_advantages8": "Platíme zdravotní pojištění",
+		"our_advantages9": "Volná místa",
+		"our_advantages10": "Schopnost pracovat přesčas",
+		"our_advantages11": "Zajišťujeme dopravu z domova do práce",
+		"our_advantages12": "Jsme tu pro vás v případě problémů",
+		"our_advantages13": "Pomůžeme vám překonat jazykovou bariéru",
+		"our_advantages14": "Pomůžeme vám s vaším stěhováním"
 	}
 }

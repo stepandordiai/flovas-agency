@@ -99,21 +99,21 @@ const LanguageSelect = () => {
 					<ul className="lng-select__list">
 						<li
 							className={
-								getLngStorage() === "cs" ? activeLngOption : inactiveLngOption
-							}
-							data-value="cs"
-						>
-							<span>Čeština</span>
-							<img width={25} height={25} src={csIcon} alt="" />
-						</li>
-						<li
-							className={
 								getLngStorage() === "uk" ? activeLngOption : inactiveLngOption
 							}
 							data-value="uk"
 						>
 							<span>Українська</span>
 							<img width={25} height={25} src={ukIcon} alt="" />
+						</li>
+						<li
+							className={
+								getLngStorage() === "cs" ? activeLngOption : inactiveLngOption
+							}
+							data-value="cs"
+						>
+							<span>Čeština</span>
+							<img width={25} height={25} src={csIcon} alt="" />
 						</li>
 						<li
 							className={
