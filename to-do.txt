@@ -1,4 +1,3 @@
 add fixed links for whatsapp and for phone
 update vacancy page
 update about list
-update addtohomescreen with icons more details
