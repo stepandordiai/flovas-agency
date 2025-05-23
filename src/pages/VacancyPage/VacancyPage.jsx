@@ -10,6 +10,8 @@ const VacancyPage = ({ vacanciesData }) => {
 
 	const vacancy = vacanciesData.find((vacancy) => vacancy._id == id);
 
+	if (!vacancy) return;
+
 	return (
 		<div className="vacancy-page">
 			<div className="vacancy-page__container">

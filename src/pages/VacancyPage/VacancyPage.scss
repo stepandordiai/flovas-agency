@@ -12,25 +12,28 @@
 
 .vacancy-page__container {
 	display: flex;
+	height: 50%;
 }
 
 .vacancy-page__img {
-	width: 400px;
+	height: 100%;
 }
 
 .vacancy-page__details {
 	padding: 25px;
 	display: flex;
 	flex-direction: column;
+	row-gap: 10px;
 }
 
 .vacancy-page__place {
-	font-size: 1.5rem;
+	font-size: clamp(1rem, 4vw, 1.5rem);
 	font-weight: 500;
+	margin-bottom: 10px;
 }
 
 .vacancy-page__title {
-	font-size: 2rem;
+	font-size: clamp(1.25rem, 4vw, 2rem);
 	font-weight: 500;
 }
 
@@ -64,8 +67,14 @@
 	}
 }
 
-@media screen and (width <= 896px) {
+@media screen and (width <= 800px) {
 	.vacancy-page__container {
 		flex-direction: column;
+		height: 100%;
+	}
+
+	.vacancy-page__img {
+		width: 400px;
+		height: auto;
 	}
 }
