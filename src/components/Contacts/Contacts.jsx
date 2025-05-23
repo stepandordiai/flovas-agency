@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import instagramIcon from "/icons/instagram.png";
-import tiktokIcon from "/icons/tiktok.png";
+import tiktokIcon from "/icons/tik-tok.png";
 import facebookIcon from "/icons/facebook.png";
 import "./Contacts.scss";
 

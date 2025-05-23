@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import instagramIcon from "/icons/instagram.png";
-import tiktokIcon from "/icons/tiktok.png";
+import tiktokIcon from "/icons/tik-tok.png";
 import facebookIcon from "/icons/facebook.png";
 import "./ContactUs.scss";
 
@@ -48,17 +48,17 @@ const ContactUs = () => {
 						<div>
 							<a href={instagramUrl} title="Instagram" target="_blank">
 								<img
-									width={30}
-									height={30}
+									width={40}
+									height={40}
 									src={instagramIcon}
 									alt="Instagram"
 								/>
 							</a>
 							<a href={tiktokUrl} title="TikTok" target="_blank">
-								<img width={30} height={30} src={tiktokIcon} alt="TikTok" />
+								<img width={40} height={40} src={tiktokIcon} alt="TikTok" />
 							</a>
 							<a href={facebookUrl} title="Facebook" target="_blank">
-								<img width={30} height={30} src={facebookIcon} alt="Facebook" />
+								<img width={40} height={40} src={facebookIcon} alt="Facebook" />
 							</a>
 						</div>
 					</div>
