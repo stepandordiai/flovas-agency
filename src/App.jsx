@@ -11,11 +11,11 @@ import VacancyPage from "./pages/VacancyPage/VacancyPage";
 import "./i18next";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ScrollToTop from "./utils/ScrollToTop";
 import phoneIcon from "/icons/phone.png";
 import whatsappIcon from "/icons/whatsapp.png";
 import telegramIcon from "/icons/telegram.png";
 import "./App.scss";
-import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
 	const [vacanciesData, setVacanciesData] = useState([]);
@@ -25,13 +25,13 @@ function App() {
 		setIsLoading(true);
 		try {
 			const response = await axios(
-				"https://flovas-crud.onrender.com/api/products"
+				"https://flovas-crud.onrender.com/api/vacancies"
 			);
 
 			setVacanciesData(response.data);
-			setTimeout(() => {
-				setIsLoading(false);
-			}, 3000);
+			// setTimeout(() => {
+			setIsLoading(false);
+			// }, 3000);
 		} catch (error) {
 			console.log(error);
 			setIsLoading(false);
