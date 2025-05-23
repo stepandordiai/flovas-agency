@@ -5,7 +5,7 @@ import "./Vacancy.scss";
 const Vacancy = ({ vacancy }) => {
 	const { t } = useTranslation();
 
-	const { img, place, title, updatedAt } = vacancy;
+	const { _id, img, place, title, updatedAt } = vacancy;
 
 	return (
 		<div className={"vacancy"}>
@@ -24,11 +24,7 @@ const Vacancy = ({ vacancy }) => {
 				<p className={"vacancy__title"}>{title}</p>
 			</div>
 			<div className="vacancy__link-container">
-				<NavLink
-					className={"vacancy__link"}
-					to={"/vacancy-page"}
-					style={{ pointerEvents: "none" }}
-				>
+				<NavLink className={"vacancy__link"} to={`/vacancy-page/${_id}`}>
 					{t("more_info_btn")}
 				</NavLink>
 				<a className={"vacancy__link"} href="tel:+420777957290">

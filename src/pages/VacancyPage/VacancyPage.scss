@@ -1,0 +1,71 @@
+.vacancy-page {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: flex-start;
+	margin-top: 75px;
+	height: calc(100vh - 100px);
+	background: #fff;
+	border-radius: 25px;
+	padding: 25px;
+}
+
+.vacancy-page__container {
+	display: flex;
+}
+
+.vacancy-page__img {
+	width: 400px;
+}
+
+.vacancy-page__details {
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+}
+
+.vacancy-page__place {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.vacancy-page__title {
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.vacancy-page__link-container {
+	display: flex;
+	gap: 5px;
+	margin-top: auto;
+}
+
+.vacancy-page__link {
+	background: var(--bg-lighter-clr);
+	padding: 10px;
+	color: #000;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background: var(--sec-accent-clr);
+	}
+}
+
+@media screen and (width <= 896px) {
+	.vacancy-page {
+		margin-top: 50px;
+		justify-content: center;
+		padding: 10px;
+		height: calc(100vh - 60px);
+	}
+
+	.vacancy-page__details {
+		padding: 10px;
+	}
+}
+
+@media screen and (width <= 896px) {
+	.vacancy-page__container {
+		flex-direction: column;
+	}
+}

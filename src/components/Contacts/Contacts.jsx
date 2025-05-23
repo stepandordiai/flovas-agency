@@ -19,7 +19,7 @@ const Contacts = () => {
 					<h3 className="contacts__details-title">{t("contact_info")}</h3>
 					<div className="contacts__details-container">
 						<p>{t("tel")}</p>
-						<a href="tel:+420777957290">+420777957290</a>
+						<a href="tel:+420777957290">+420 777 957 290</a>
 						<p>E-mail</p>
 						<a href="mailto:work1agency@seznam.cz">work1agency@seznam.cz</a>
 						<p>{t("address")}</p>

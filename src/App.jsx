@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	ScrollRestoration,
+} from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
@@ -10,6 +15,7 @@ import phoneIcon from "/icons/phone.png";
 import whatsappIcon from "/icons/whatsapp.png";
 import telegramIcon from "/icons/telegram.png";
 import "./App.scss";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
 	const [vacanciesData, setVacanciesData] = useState([]);
@@ -38,6 +44,7 @@ function App() {
 
 	return (
 		<Router>
+			<ScrollToTop />
 			<Header vacanciesData={vacanciesData} />
 			<Routes>
 				<Route
@@ -45,7 +52,7 @@ function App() {
 					element={<Home vacanciesData={vacanciesData} isLoading={isLoading} />}
 				/>
 				<Route
-					path="/vacancy-page"
+					path="/vacancy-page/:id"
 					element={<VacancyPage vacanciesData={vacanciesData} />}
 				/>
 			</Routes>
