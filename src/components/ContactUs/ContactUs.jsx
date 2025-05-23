@@ -16,11 +16,9 @@ const ContactUs = () => {
 			.classList.remove("contact-us__curtain--active");
 	}
 
-	const instagramUrl =
-		"https://www.instagram.com/robota1cz/?igsh=MTNmaTU0YWRlenRxag%3D%3D&utm_source=qr#";
-	const tiktokUrl = "https://www.tiktok.com/@robota1cz?_t=ZN-8wDLULhhMGc&_r=1";
-	const facebookUrl =
-		"https://www.facebook.com/profile.php?id=61565186673220&mibextid=wwXIfr&rdid=UJ6NQQAM9hT0QXnU&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F12Gr47Fn97X%2F%3Fmibextid%3DwwXIfr#";
+	const instagramUrl = "https://www.instagram.com/flovas.agency/";
+	const tiktokUrl = "https://www.tiktok.com/@flovas.agency";
+	const facebookUrl = "https://www.facebook.com/profile.php?id=61565186673220";
 
 	return (
 		<>
@@ -49,13 +47,18 @@ const ContactUs = () => {
 						</p>
 						<div>
 							<a href={instagramUrl} title="Instagram" target="_blank">
-								<img width={30} src={instagramIcon} alt="" />
+								<img
+									width={30}
+									height={30}
+									src={instagramIcon}
+									alt="Instagram"
+								/>
 							</a>
 							<a href={tiktokUrl} title="TikTok" target="_blank">
-								<img width={30} src={tiktokIcon} alt="" />
+								<img width={30} height={30} src={tiktokIcon} alt="TikTok" />
 							</a>
 							<a href={facebookUrl} title="Facebook" target="_blank">
-								<img width={30} src={facebookIcon} alt="" />
+								<img width={30} height={30} src={facebookIcon} alt="Facebook" />
 							</a>
 						</div>
 					</div>

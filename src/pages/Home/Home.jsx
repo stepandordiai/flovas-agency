@@ -4,8 +4,8 @@ import ContactUs from "../../components/ContactUs/ContactUs";
 import Vacancies from "../../components/Vacancies/Vacancies";
 import About from "../../components/About/About";
 import Contacts from "../../components/Contacts/Contacts";
-import "./Home.scss";
 import AddToHomeScreen from "../../components/AddToHomeScreen/AddToHomeScreen";
+import "./Home.scss";
 
 const Home = ({ vacanciesData, isLoading }) => {
 	const { t, i18n } = useTranslation();
@@ -23,6 +23,7 @@ const Home = ({ vacanciesData, isLoading }) => {
 		t("home.place5"),
 		t("home.place6"),
 		t("home.place7"),
+		t("home.place8"),
 	];
 
 	useEffect(() => {
