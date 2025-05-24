@@ -1,9 +1,4 @@
-import {
-	BrowserRouter as Router,
-	Routes,
-	Route,
-	ScrollRestoration,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
@@ -58,7 +53,11 @@ function App() {
 			</Routes>
 			<div className="empty-div"></div>
 			<Footer />
-			<a className="fixed-contact-link" href="" target="_blank">
+			<a
+				className="fixed-contact-link"
+				href="https://t.me/Robota_1cz"
+				target="_blank"
+			>
 				<img width={50} height={50} src={telegramIcon} alt="Telegram" />
 			</a>
 			<a
